@@ -5,12 +5,15 @@ on:
     branches: [ main ]
     paths:
       - 'data/*.json'
-      - 'app.py'
       - 'route/*.json'
+      - 'app.py'
       - '.github/workflows/**'
+    paths-ignore:
+      - 'outputs/**'         # outputs 커밋으로 인한 재실행 방지
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write            # ← outputs 커밋/푸시 위해 write 필요
   pages: write
   id-token: write
 
@@ -24,22 +27,24 @@ jobs:
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
-        
+        with:
+          persist-credentials: true   # GITHUB_TOKEN으로 push
+
       - name: Python 설정
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          
+
       - name: 의존성 설치
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          
+
       - name: 사이트 빌드
         run: |
           python app.py || echo "app.py 실행 중 오류 발생"
           mkdir -p outputs
-          
+
       - name: 플레이스홀더 생성 (필요시)
         run: |
           if [ ! -f outputs/index.html ]; then
@@ -48,7 +53,20 @@ jobs:
           fi
           echo "=== outputs 폴더 내용 ==="
           ls -la outputs/
-          
+
+      # === 여기서 outputs/를 레포에 커밋 & 푸시 ===
+      - name: outputs 커밋 & 푸시
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update outputs [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "커밋할 변경 없음"
+          fi
+
       - name: Pages 아티팩트 업로드
         uses: actions/upload-pages-artifact@v3
         with:
