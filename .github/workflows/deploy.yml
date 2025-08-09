@@ -42,10 +42,10 @@ jobs:
       uses: actions/configure-pages@v4
       
     - name: 빌드 결과 업로드
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-pages-artifact@v3
       with:
         path: './outputs'
         
     - name: GitHub Pages 배포
       id: deployment
-      uses: actions/deploy-pages@v4
+      uses: actions/deploy-pages@v3
