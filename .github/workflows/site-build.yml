@@ -29,8 +29,12 @@ jobs:
         
     - name: 사이트 빌드
       run: |
-        python app.py || echo "app.py 실행 중 오류 발생"
+        echo "=== app.py 실행 시작 ==="
+        python app.py
+        echo "=== app.py 실행 완료 ==="
         mkdir -p outputs
+        echo "=== outputs 폴더 생성 후 내용 ==="
+        ls -la outputs/ || echo "outputs 폴더 비어있음"
         
     - name: 플레이스홀더 생성 (필요시)
       run: |
