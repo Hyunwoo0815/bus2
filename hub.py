@@ -595,8 +595,12 @@ def generate_all_terminal_pages():
     
     generated_count = 0
     
+    print(f"🏗️ {len(grouped_routes)}개 터미널 페이지 생성 시작...")
+    
     # 각 터미널별로 페이지 생성
     for terminal_name, destinations in grouped_routes.items():
+        print(f"📝 {terminal_name} 터미널 페이지 생성 중... ({len(destinations)}개 노선)")
+        
         # HTML 생성
         html_content = generate_terminal_page(terminal_name, destinations)
         
@@ -608,10 +612,30 @@ def generate_all_terminal_pages():
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
-        generated_count += 1
-        print(f"✅ {terminal_name} 터미널 페이지 생성 완료 ({len(destinations)}개 노선)")
+        # 파일이 실제로 생성되었는지 확인
+        if os.path.exists(output_file):
+            file_size = os.path.getsize(output_file)
+            print(f"✅ {terminal_name} 터미널 페이지 생성 완료 ({len(destinations)}개 노선, {file_size:,} bytes)")
+            generated_count += 1
+        else:
+            print(f"❌ {terminal_name} 터미널 페이지 생성 실패")
     
     print(f"🎉 총 {generated_count}개 터미널 페이지 생성 완료!")
+    
+    # 생성된 파일들 확인
+    print("📁 outputs 폴더 최종 상태:")
+    terminal_files = glob.glob('outputs/*-터미널-시외버스-시간표.html')
+    route_files = glob.glob('outputs/*-에서-*-가는-시외버스-시간표.html')
+    other_files = glob.glob('outputs/*.json') + glob.glob('outputs/*.xml') + glob.glob('outputs/*.txt')
+    
+    print(f"   🏢 터미널 페이지: {len(terminal_files)}개")
+    for tf in terminal_files:
+        print(f"      - {os.path.basename(tf)}")
+    
+    print(f"   🚌 노선 페이지: {len(route_files)}개")
+    print(f"   📄 기타 파일: {len(other_files)}개")
+    
+    return generated_count
 
 if __name__ == "__main__":
     print("🚀 터미널 페이지 생성 시작...")
