@@ -34,9 +34,11 @@ jobs:
       run: |
         echo "=== 1. 버스 시간표 HTML 생성 ==="
         python app.py
-        echo "=== 2. Sitemap과 RSS 생성 ==="
+        echo "=== 2. 터미널 허브 페이지 생성 ==="
+        python hub.py
+        echo "=== 3. Sitemap과 RSS 생성 ==="
         python sitemap.py
-        echo "=== 3. 빌드 완료 ==="
+        echo "=== 4. 빌드 완료 ==="
         mkdir -p outputs
         echo "=== outputs 폴더 생성 후 내용 ==="
         ls -la outputs/ || echo "outputs 폴더 비어있음"
