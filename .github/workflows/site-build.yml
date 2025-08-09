@@ -41,11 +41,19 @@ jobs:
         echo "=== outputs 폴더 내용 ===" 
         ls -la outputs/
         
+    - name: 파일을 root로 복사
+      run: |
+        # outputs 폴더의 모든 파일을 root로 복사
+        cp -r outputs/* . 2>/dev/null || true
+        echo "=== root 폴더 내용 ===" 
+        ls -la *.html *.json 2>/dev/null || echo "생성된 파일 없음"
+        
     - name: 빌드 결과 커밋 및 푸시
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add outputs/
+        # root의 생성된 파일들을 add
+        git add *.html *.json *.css *.js 2>/dev/null || true
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
