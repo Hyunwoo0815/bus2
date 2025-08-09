@@ -53,6 +53,8 @@ jobs:
         cp outputs/*.xml . 2>/dev/null || true
         cp outputs/*.txt . 2>/dev/null || true
         cp outputs/*-시외버스-시간표.html . 2>/dev/null || true
+        # index.html이 복사되었다면 삭제
+        rm -f index.html 2>/dev/null || true
         echo "=== 복사된 파일들 ===" 
         ls -la *.html *.json *.xml *.txt 2>/dev/null || echo "생성된 파일 없음"
         
@@ -60,8 +62,8 @@ jobs:
       run: |
         git config --local user.email "hyunwoohappy@gmail.com"
         git config --local user.name "Hyunwoo0815"
-        # 모든 생성된 파일들을 강제로 add
-        git add -A
+        # 생성된 파일들만 선택적으로 add (index.html과 CNAME 등 제외)
+        git add *-시외버스-시간표.html *.json *.xml *.txt 2>/dev/null || true
         echo "=== git status ==="
         git status
         echo "=== staged files ==="
