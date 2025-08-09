@@ -58,27 +58,53 @@ jobs:
         
     - name: 파일을 root로 복사
       run: |
-        # outputs 폴더의 파일들을 root로 복사 (index.html 제외)
+        # outputs 폴더의 모든 내용 확인
+        echo "=== outputs 폴더 전체 내용 ==="
+        ls -la outputs/ 2>/dev/null || echo "outputs 폴더 없음"
+        
+        # 터미널 페이지들이 있는지 확인
+        echo "=== 터미널 페이지 확인 ==="
+        ls -la outputs/*-터미널-시외버스-시간표.html 2>/dev/null || echo "터미널 페이지 없음"
+        
+        # 파일들을 root로 복사
         cp outputs/*.json . 2>/dev/null || true
         cp outputs/*.xml . 2>/dev/null || true
         cp outputs/*.txt . 2>/dev/null || true
         cp outputs/*-시외버스-시간표.html . 2>/dev/null || true
-        cp outputs/*-터미널-시외버스-시간표.html . 2>/dev/null || true
+        
         # index.html이 복사되었다면 삭제
         rm -f index.html 2>/dev/null || true
+        
         echo "=== 복사된 파일들 ===" 
-        ls -la *.html *.json *.xml *.txt 2>/dev/null || echo "생성된 파일 없음"
+        echo "--- 노선 시간표 파일들 ---"
+        ls -la *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "노선 페이지:"
+        echo "--- 터미널 허브 파일들 ---"
+        ls -la *-터미널-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "터미널 페이지:"
+        echo "--- 기타 파일들 ---"
+        ls -la *.json *.xml *.txt 2>/dev/null || echo "기타 파일 없음"
         
     - name: 빌드 결과 커밋 및 푸시
       run: |
         git config --local user.email "hyunwoohappy@gmail.com"
         git config --local user.name "Hyunwoo0815"
+        
+        # 모든 생성된 HTML 파일들을 add
+        echo "=== 커밋할 파일들 확인 ==="
+        echo "--- 노선 시간표 파일들 ---"
+        ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "노선 페이지 수:"
+        echo "--- 터미널 허브 파일들 ---"  
+        ls -1 *-터미널-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "터미널 페이지 수:"
+        
         # 생성된 파일들만 선택적으로 add (index.html과 CNAME 등 제외)
-        git add *-시외버스-시간표.html *-터미널-시외버스-시간표.html *.json *.xml *.txt 2>/dev/null || true
+        git add *-에서-*-가는-시외버스-시간표.html 2>/dev/null || true
+        git add *-터미널-시외버스-시간표.html 2>/dev/null || true
+        git add *.json *.xml *.txt 2>/dev/null || true
+        
         echo "=== git status ==="
         git status
         echo "=== staged files ==="
         git diff --staged --name-only
+        
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
