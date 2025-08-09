@@ -15,12 +15,25 @@ def load_route_data():
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                
-            # 출발지와 도착지 추출
-            if 'route' in data:
-                route_info = data['route']
-                departure = route_info.get('departure', '')
-                arrival = route_info.get('arrival', '')
+            
+            # JSON이 리스트인 경우 각 항목 처리
+            if isinstance(data, list):
+                for item in data:
+                    departure = item.get('출발지', '')
+                    arrival = item.get('도착지', '')
+                    
+                    if departure and arrival:
+                        routes.append({
+                            'departure': departure,
+                            'arrival': arrival,
+                            'filename': f"{departure}-에서-{arrival}-가는-시외버스-시간표.html",
+                            'url': f"/{departure}-에서-{arrival}-가는-시외버스-시간표"
+                        })
+            
+            # JSON이 딕셔너리인 경우
+            elif isinstance(data, dict):
+                departure = data.get('출발지', '')
+                arrival = data.get('도착지', '')
                 
                 if departure and arrival:
                     routes.append({
