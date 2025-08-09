@@ -32,10 +32,18 @@ jobs:
         
     - name: 사이트 빌드
       run: |
+        echo "=== 파일 존재 확인 ==="
+        ls -la *.py
         echo "=== 1. 버스 시간표 HTML 생성 ==="
         python app.py
         echo "=== 2. 터미널 허브 페이지 생성 ==="
-        python hub.py
+        if [ -f "hub.py" ]; then
+          echo "hub.py 파일 존재함"
+          python hub.py
+        else
+          echo "❌ hub.py 파일이 없습니다"
+          exit 1
+        fi
         echo "=== 3. Sitemap과 RSS 생성 ==="
         python sitemap.py
         echo "=== 4. 빌드 완료 ==="
