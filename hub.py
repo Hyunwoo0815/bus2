@@ -10,17 +10,21 @@ def load_route_data():
     
     # data 폴더의 모든 JSON 파일 찾기
     json_files = glob.glob('data/*.json')
+    print(f"🔍 발견된 JSON 파일들: {len(json_files)}개")
     
     for json_file in json_files:
         try:
+            print(f"📂 처리 중: {json_file}")
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
             # JSON이 리스트인 경우 각 항목 처리
             if isinstance(data, list):
-                for item in data:
+                print(f"   📋 리스트 형태: {len(data)}개 항목")
+                for i, item in enumerate(data):
                     departure = item.get('출발지', '')
                     arrival = item.get('도착지', '')
+                    print(f"   🚌 {i+1}: {departure} → {arrival}")
                     
                     if departure and arrival:
                         routes.append({
@@ -34,6 +38,7 @@ def load_route_data():
             elif isinstance(data, dict):
                 departure = data.get('출발지', '')
                 arrival = data.get('도착지', '')
+                print(f"   📋 딕셔너리 형태: {departure} → {arrival}")
                 
                 if departure and arrival:
                     routes.append({
@@ -42,10 +47,24 @@ def load_route_data():
                         'filename': f"{departure}-에서-{arrival}-가는-시외버스-시간표.html",
                         'url': f"/{departure}-에서-{arrival}-가는-시외버스-시간표"
                     })
+            else:
+                print(f"   ⚠️ 알 수 없는 데이터 형태: {type(data)}")
                     
         except Exception as e:
             print(f"❌ {json_file} 파일 처리 중 오류: {e}")
             continue
+    
+    print(f"📊 총 로드된 노선: {len(routes)}개")
+    
+    # 출발지별 통계
+    departures = {}
+    for route in routes:
+        dep = route['departure']
+        departures[dep] = departures.get(dep, 0) + 1
+    
+    print("📈 출발지별 노선 수:")
+    for dep, count in departures.items():
+        print(f"   🚏 {dep}: {count}개 노선")
     
     return routes
 
