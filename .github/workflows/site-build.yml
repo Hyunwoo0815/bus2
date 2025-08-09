@@ -54,10 +54,14 @@ jobs:
         
     - name: 빌드 결과 커밋 및 푸시
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        # root의 생성된 파일들을 add
-        git add *.html *.json *.css *.js 2>/dev/null || true
+        git config --local user.email "hyunwoohappy@gmail.com"
+        git config --local user.name "Hyunwoo0815"
+        # 모든 생성된 파일들을 강제로 add
+        git add -A
+        echo "=== git status ==="
+        git status
+        echo "=== staged files ==="
+        git diff --staged --name-only
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
