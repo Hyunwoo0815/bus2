@@ -5,27 +5,39 @@ from urllib.parse import quote
 
 def generate_sitemap():
     """sitemap.xml 파일을 생성합니다."""
-    base_url = "https://hyunwoo0815.github.io/bus2/"
+    base_url = "https://bus.medilocator.co.kr/"
     
     # XML 헤더
     sitemap_content = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'''
     
+    # 메인 페이지 추가
+    lastmod = datetime.now().strftime('%Y-%m-%d')
+    sitemap_content += f'''
+    <url>
+        <loc>{base_url}</loc>
+        <lastmod>{lastmod}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>'''
+    
     # outputs 폴더의 모든 HTML 파일 찾기
     html_files = glob.glob('outputs/*.html')
     
-    # 각 HTML 파일에 대한 URL 추가
+    # 각 HTML 파일에 대한 URL 추가 (.html 확장자 제거)
     for html_file in sorted(html_files):
         filename = os.path.basename(html_file)
         
-        # index.html은 제외 (필요에 따라 수정 가능)
+        # index.html은 이미 메인 페이지로 추가했으므로 제외
         if filename == 'index.html':
             continue
             
+        # .html 확장자 제거
+        filename_without_ext = filename.replace('.html', '')
+        
         # URL 인코딩 (한글 파일명 처리)
-        encoded_filename = quote(filename, safe='-._~')
+        encoded_filename = quote(filename_without_ext, safe='-._~')
         url = base_url + encoded_filename
-        lastmod = datetime.now().strftime('%Y-%m-%d')
         
         sitemap_content += f'''
     <url>
@@ -44,7 +56,7 @@ def generate_sitemap():
     with open('outputs/sitemap.xml', 'w', encoding='utf-8') as f:
         f.write(sitemap_content)
     
-    print(f"✅ Sitemap 생성 완료: {len(html_files)}개 페이지")
+    print(f"✅ Sitemap 생성 완료: 메인 페이지 + {len([f for f in html_files if not f.endswith('index.html')])}개 페이지")
 
 def generate_rss():
     """rss.xml 파일을 생성합니다."""
@@ -79,11 +91,12 @@ def generate_rss():
         if filename == 'index.html':
             continue
             
-        # 파일명에서 노선 정보 추출
+        # 파일명에서 노선 정보 추출 (.html 확장자 제거)
         route_info = filename.replace('-시외버스-시간표.html', '').replace('-', ' → ')
         
-        # URL 인코딩
-        encoded_filename = quote(filename, safe='-._~')
+        # .html 확장자 제거한 URL
+        filename_without_ext = filename.replace('.html', '')
+        encoded_filename = quote(filename_without_ext, safe='-._~')
         url = base_url + encoded_filename
         
         # 파일 수정 시간
