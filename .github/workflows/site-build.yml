@@ -30,28 +30,30 @@ jobs:
       - name: Install deps
         shell: bash
         run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build site (best-effort)
         shell: bash
         run: |
+          set -euo pipefail
           # app.py가 있으면 실행(에러 나도 계속 진행)
           if [ -f app.py ]; then python app.py || true; fi
 
-      # ✅ outputs가 비어 있으면 placeholder index.html 생성 (heredoc 들여쓰기 주의)
+      # ✅ outputs가 비면 placeholder index.html을 printf로 생성 (YAML-safe)
       - name: Ensure placeholder index.html in outputs
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p outputs
           if [ -z "$(find outputs -type f 2>/dev/null)" ]; then
-cat > outputs/index.html <<'HTML'
-<!doctype html><meta charset="utf-8">
-<title>버스 시간표</title>
-<h1>아직 생성된 시간표가 없습니다</h1>
-<p>data 폴더에 *_schedules.json을 추가하면 자동으로 페이지가 생성됩니다.</p>
-HTML
+            printf '%s\n' \
+'<!doctype html><meta charset="utf-8">' \
+'<title>버스 시간표</title>' \
+'<h1>아직 생성된 시간표가 없습니다</h1>' \
+'<p>data 폴더에 *_schedules.json을 추가하면 자동으로 페이지가 생성됩니다.</p>' \
+> outputs/index.html
             echo "Created placeholder outputs/index.html"
           fi
           echo "=== outputs contents ==="
