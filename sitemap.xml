@@ -127,6 +127,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://bus.medilocator.co.kr/%EA%B0%80%ED%8F%89-%ED%84%B0%EB%AF%B8%EB%84%90-%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4-%EC%8B%9C%EA%B0%84%ED%91%9C</loc>
+        <lastmod>2025-08-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://bus.medilocator.co.kr/%EA%B0%95%EB%A6%89-%EC%97%90%EC%84%9C-%EA%B0%95%EA%B5%AC-%EA%B0%80%EB%8A%94-%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4-%EC%8B%9C%EA%B0%84%ED%91%9C</loc>
         <lastmod>2025-08-09</lastmod>
         <changefreq>daily</changefreq>
@@ -506,6 +512,12 @@
     </url>
     <url>
         <loc>https://bus.medilocator.co.kr/%EA%B0%95%EB%A6%89-%EC%97%90%EC%84%9C-%ED%9B%84%ED%8F%AC-%EA%B0%80%EB%8A%94-%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4-%EC%8B%9C%EA%B0%84%ED%91%9C</loc>
+        <lastmod>2025-08-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bus.medilocator.co.kr/%EA%B0%95%EB%A6%89-%ED%84%B0%EB%AF%B8%EB%84%90-%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4-%EC%8B%9C%EA%B0%84%ED%91%9C</loc>
         <lastmod>2025-08-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
