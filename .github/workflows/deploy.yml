@@ -42,7 +42,7 @@ jobs:
         uses: actions/configure-pages@v4
         
       - name: 빌드 결과 업로드
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './outputs'
           
