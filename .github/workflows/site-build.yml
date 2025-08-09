@@ -8,6 +8,9 @@ on:
       - 'app.py'
       - 'route/*.json'
       - '.github/workflows/**'
+  schedule:
+    - cron: '0 2 * * *'  # 매일 오전 11시 (한국시간 UTC+9)
+  workflow_dispatch:  # 수동 실행 가능
 
 jobs:
   build:
@@ -29,28 +32,29 @@ jobs:
         
     - name: 사이트 빌드
       run: |
-        echo "=== app.py 실행 시작 ==="
+        echo "=== 1. 버스 시간표 HTML 생성 ==="
         python app.py
-        echo "=== app.py 실행 완료 ==="
+        echo "=== 2. Sitemap과 RSS 생성 ==="
+        python sitemap.py
+        echo "=== 3. 빌드 완료 ==="
         mkdir -p outputs
         echo "=== outputs 폴더 생성 후 내용 ==="
         ls -la outputs/ || echo "outputs 폴더 비어있음"
         
     - name: 플레이스홀더 생성 (필요시)
       run: |
-        if [ ! -f outputs/index.html ]; then
-          echo '<!doctype html><meta charset="utf-8"><title>버스 시간표</title><h1>아직 생성된 시간표가 없습니다</h1><p>data 폴더에 JSON 파일을 추가하면 자동으로 페이지가 생성됩니다.</p>' > outputs/index.html
-          echo "플레이스홀더 index.html 생성됨"
-        fi
         echo "=== outputs 폴더 내용 ===" 
         ls -la outputs/
         
     - name: 파일을 root로 복사
       run: |
-        # outputs 폴더의 모든 파일을 root로 복사
-        cp -r outputs/* . 2>/dev/null || true
-        echo "=== root 폴더 내용 ===" 
-        ls -la *.html *.json 2>/dev/null || echo "생성된 파일 없음"
+        # outputs 폴더의 파일들을 root로 복사 (index.html 제외)
+        cp outputs/*.json . 2>/dev/null || true
+        cp outputs/*.xml . 2>/dev/null || true
+        cp outputs/*.txt . 2>/dev/null || true
+        cp outputs/*-시외버스-시간표.html . 2>/dev/null || true
+        echo "=== 복사된 파일들 ===" 
+        ls -la *.html *.json *.xml *.txt 2>/dev/null || echo "생성된 파일 없음"
         
     - name: 빌드 결과 커밋 및 푸시
       run: |
