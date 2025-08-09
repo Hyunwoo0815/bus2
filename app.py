@@ -1,33 +1,63 @@
 import json
 import os
+import glob
 from datetime import datetime
 import random
 
-
-
-# 📂 JSON 파일 경로 및 출력 폴더 (Raw string 사용)
-json_file_path = r"C:\Users\samsung\Desktop\bus\json\인천_schedules.json"
-output_folder = r"C:\Users\samsung\Desktop\bus\outputs"
+# 📂 폴더 경로 설정 (GitHub Actions 환경에 맞게)
+data_folder = "data"
+output_folder = "outputs"
+route_file_path = "route/total_route.json"
 published_dates_file = os.path.join(output_folder, "published_dates.json")
 
 # 📂 출력 폴더 생성
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# 🔍 JSON 파일 확인
-if not os.path.exists(json_file_path):
-    print(f"🚫 파일을 찾을 수 없습니다: {json_file_path}")
+# 🔍 data 폴더의 모든 JSON 파일 찾기
+json_files = glob.glob(os.path.join(data_folder, "*_schedules.json"))
+
+if not json_files:
+    print(f"🚫 {data_folder} 폴더에 '*_schedules.json' 파일을 찾을 수 없습니다.")
     exit(1)
 
-# 🔍 JSON 파일 읽기
-with open(json_file_path, encoding='utf-8') as f:
-    bus_data = json.load(f)
+print(f"✅ 발견된 JSON 파일: {len(json_files)}개")
+for file in json_files:
+    print(f"  📄 {file}")
 
-print(f"✅ JSON 데이터 로드 완료.")
-print(f"📊 데이터 타입: {type(bus_data)}")
+# ✅ 오늘 날짜
+today_date = datetime.today().strftime("%Y-%m-%d")
+update_date = datetime.today().strftime("%Y년 %m월 %d일")
+year = datetime.today().year
 
-# ✅ JSON 데이터의 구조 확인 및 변환
-schedules = {}  # 📌 schedules 변수 전역 초기화
+# ✅ 파일별 발행일 관리
+if os.path.exists(published_dates_file):
+    try:
+        with open(published_dates_file, "r", encoding="utf-8") as f:
+            published_dates = json.load(f)
+    except json.JSONDecodeError:
+        print("🚫 'published_dates.json' 파일이 손상되었습니다. 새로 생성합니다.")
+        published_dates = {}
+else:
+    published_dates = {}
+
+# ✅ 출발지 기준 도착지 리스트 불러오기 (파일이 없으면 빈 딕셔너리)
+try:
+    with open(route_file_path, "r", encoding="utf-8") as f:
+        route_map = json.load(f)
+    print(f"✅ 노선 데이터 로드 완료: {route_file_path}")
+except FileNotFoundError:
+    print(f"⚠️  노선 파일을 찾을 수 없습니다: {route_file_path}")
+    print("📝 내부 링크 생성을 건너뛰고 계속 진행합니다.")
+    route_map = {}
+except json.JSONDecodeError:
+    print(f"🚫 노선 파일이 손상되었습니다: {route_file_path}")
+    print("📝 내부 링크 생성을 건너뛰고 계속 진행합니다.")
+    route_map = {}
+
+# ✅ 생성된 HTML 파일 목록
+all_created_files = []
+all_skipped_destinations = []
 
 def extract_duration_minutes(info_text):
     """차편정보에서 소요시간(분) 추출"""
@@ -54,95 +84,57 @@ def extract_duration_minutes(info_text):
     except:
         return 0
 
-
-
-if isinstance(bus_data, list):
-    print(f"📋 리스트 형태 데이터 감지. 항목 개수: {len(bus_data)}")
+def sanitize_filename(filename):
+    """파일명에서 특수문자를 제거하거나 안전한 문자로 대체"""
+    # 허용되지 않는 문자들을 대체
+    invalid_chars = ['/', '\\', ':', '*', '?', '"', '<', '>', '|', '\n', '\r', '\t']
+    sanitized = filename
     
-    # 새로운 JSON 구조에 맞게 처리: [{"출발지": "인천", "도착지": "신갈", "스케줄": [...]}]
-    for route_item in bus_data:
-        if isinstance(route_item, dict):
-            departure = route_item.get('출발지', '')
-            destination = route_item.get('도착지', '')
-            schedule_list = route_item.get('스케줄', [])
-            
-            print(f"🚌 노선: {departure} → {destination} ({len(schedule_list)}개 스케줄)")
-            
-            if destination and schedule_list:
-                if destination not in schedules:
-                    schedules[destination] = []
-                
-                # 스케줄 리스트의 각 항목을 버스 데이터로 변환
-                for schedule in schedule_list:
-                    if isinstance(schedule, dict):
-                        # 기존 버스 데이터 형식으로 변환
-                        bus_data_converted = {
-                            'TIM_TIM': schedule.get('출발시각', '').replace(':', ''),  # "07:45" → "0745"
-                            'COR_NAM': schedule.get('차편정보', '').split('(')[0] if schedule.get('차편정보') else '정보 없음',  # "경남여객(일반)" → "경남여객"
-                            'LIN_TIM': extract_duration_minutes(schedule.get('차편정보', '')),  # "1:10 소요" → 70분
-                            'ARR_PLN': destination,
-                            'DEP_PLN': departure,
-                            '출발시각': schedule.get('출발시각', ''),
-                            '차편정보': schedule.get('차편정보', ''),
-                            '어른요금': schedule.get('어른요금', ''),
-                            '잔여좌석': schedule.get('잔여좌석', '')
-                        }
-                        schedules[destination].append(bus_data_converted)
+    for char in invalid_chars:
+        sanitized = sanitized.replace(char, '-')
     
-    print(f"🔷 변환된 도착지 개수: {len(schedules)}")
-    if schedules:
-        print(f"🔷 도착지 목록: {list(schedules.keys())[:10]}")  # 처음 10개만 표시
+    # 연속된 하이픈을 하나로 변경
+    while '--' in sanitized:
+        sanitized = sanitized.replace('--', '-')
+    
+    # 앞뒤 하이픈 제거
+    sanitized = sanitized.strip('-')
+    
+    # 빈 문자열 방지
+    if not sanitized or sanitized.isspace():
+        sanitized = "unknown"
+    
+    return sanitized
 
-elif isinstance(bus_data, dict):
-    print(f"📋 딕셔너리 형태 데이터 감지. 키 개수: {len(bus_data)}")
-    print(f"🔷 첫 5개 키: {list(bus_data.keys())[:5]}")
-    schedules = bus_data
-
-else:
-    print("🚫 JSON 데이터가 올바른 형식이 아닙니다. 리스트 또는 딕셔너리 구조여야 합니다.")
-    exit(1)
-
-
-# ✅ 출발지 자동 추출 (파일명 기반)
-filename = os.path.basename(json_file_path)
-dep_terminal = filename.replace("_schedules.json", "")
-
-# ✅ 오늘 날짜
-today_date = datetime.today().strftime("%Y-%m-%d")
-update_date = datetime.today().strftime("%Y년 %m월 %d일")
-year = datetime.today().year
-
-# ✅ 파일별 발행일 관리
-if os.path.exists(published_dates_file):
-    try:
-        with open(published_dates_file, "r", encoding="utf-8") as f:
-            published_dates = json.load(f)
-    except json.JSONDecodeError:
-        print("🚫 'published_dates.json' 파일이 손상되었습니다. 새로 생성합니다.")
-        published_dates = {}
-else:
-    published_dates = {}
-
-# ✅ 출발지 기준 도착지 리스트 불러오기 (파일이 없으면 빈 딕셔너리)
-route_file_path = r"C:\Users\samsung\Desktop\bus\route\total_route.json"
-try:
-    with open(route_file_path, "r", encoding="utf-8") as f:
-        route_map = json.load(f)
-    print(f"✅ 노선 데이터 로드 완료: {route_file_path}")
-except FileNotFoundError:
-    print(f"⚠️  노선 파일을 찾을 수 없습니다: {route_file_path}")
-    print("📝 내부 링크 생성을 건너뛰고 계속 진행합니다.")
-    route_map = {}
-except json.JSONDecodeError:
-    print(f"🚫 노선 파일이 손상되었습니다: {route_file_path}")
-    print("📝 내부 링크 생성을 건너뛰고 계속 진행합니다.")
-    route_map = {}
-
-# ✅ 생성된 HTML 파일 목록
-created_files = []
-
-print(f"\n🚀 HTML 파일 생성 시작...")
-print(f"📋 처리할 도착지 개수: {len(schedules)}")
+def generate_internal_links(route_map, dep_terminal, arr_terminal, max_links=7):
+    """내부 링크 생성 함수 - route_map이 비어있으면 빈 문자열 반환"""
+    if not route_map or dep_terminal not in route_map:
+        return ""  # 📝 노선 데이터가 없으면 내부 링크를 생성하지 않음
+        
+    links_html = ""
+    others = [to for to in route_map.get(dep_terminal, []) if to != arr_terminal]
+    
+    if not others:  # 다른 노선이 없으면 빈 문자열 반환
+        return ""
+        
+    random.shuffle(others)
+    max_links = min(len(others), max_links)
+    others = others[:max_links]
+    
+    links_html += f"""
+    <div class='other-routes'>
+        <h3>🚌 {dep_terminal}에서 출발하는 다른 주요 노선</h3>
+        <div class='route-grid'>
+    """
+    for to in others:
+        links_html += f"""
+            <a href="/{dep_terminal}-에서-{to}-가는-시외버스-시간표" class="route-card">
+                <span class="route-text">{dep_terminal} → {to}</span>
+                <span class="route-arrow">→</span>
+            </a>
+        """
+    links_html += "</div></div>"
+    return links_html
 
 # ✅ 새로운 현대적인 HTML 템플릿
 html_template = """<!DOCTYPE html>
@@ -848,6 +840,8 @@ html_template = """<!DOCTYPE html>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
 <script>
 // FAQ 아코디언 기능
@@ -885,289 +879,315 @@ document.addEventListener('DOMContentLoaded', function() {{
 </html>
 """
 
-def sanitize_filename(filename):
-    """파일명에서 특수문자를 제거하거나 안전한 문자로 대체"""
-    # 허용되지 않는 문자들을 대체
-    invalid_chars = ['/', '\\', ':', '*', '?', '"', '<', '>', '|', '\n', '\r', '\t']
-    sanitized = filename
+# 🚀 모든 JSON 파일 처리 시작
+print(f"\n🚀 HTML 파일 생성 시작...")
+
+for json_file_path in json_files:
+    print(f"\n📄 처리 중: {json_file_path}")
     
-    for char in invalid_chars:
-        sanitized = sanitized.replace(char, '-')
+    # ✅ 출발지 자동 추출 (파일명 기반)
+    filename = os.path.basename(json_file_path)
+    dep_terminal = filename.replace("_schedules.json", "")
     
-    # 연속된 하이픈을 하나로 변경
-    while '--' in sanitized:
-        sanitized = sanitized.replace('--', '-')
-    
-    # 앞뒤 하이픈 제거
-    sanitized = sanitized.strip('-')
-    
-    # 빈 문자열 방지
-    if not sanitized or sanitized.isspace():
-        sanitized = "unknown"
-    
-    return sanitized
-
-def extract_duration_minutes(info_text):
-    """차편정보에서 소요시간(분) 추출"""
-    if not info_text:
-        return 0
-    
-    try:
-        # "경남여객(일반)1:10 소요" → "1:10" 추출
-        import re
-        time_match = re.search(r'(\d+):(\d+)\s*소요', info_text)
-        if time_match:
-            hours = int(time_match.group(1))
-            minutes = int(time_match.group(2))
-            return hours * 60 + minutes
-        
-        # "1시간 30분" 형태도 처리
-        hour_match = re.search(r'(\d+)시간', info_text)
-        min_match = re.search(r'(\d+)분', info_text)
-        
-        hours = int(hour_match.group(1)) if hour_match else 0
-        minutes = int(min_match.group(1)) if min_match else 0
-        
-        return hours * 60 + minutes
-    except:
-        return 0
-
-def generate_internal_links(route_map, dep_terminal, arr_terminal, max_links=7):
-    """내부 링크 생성 함수 - route_map이 비어있으면 빈 문자열 반환"""
-    if not route_map or dep_terminal not in route_map:
-        return ""  # 📝 노선 데이터가 없으면 내부 링크를 생성하지 않음
-        
-    links_html = ""
-    others = [to for to in route_map.get(dep_terminal, []) if to != arr_terminal]
-    
-    if not others:  # 다른 노선이 없으면 빈 문자열 반환
-        return ""
-        
-    random.shuffle(others)
-    max_links = min(len(others), max_links)
-    others = others[:max_links]
-    
-    links_html += f"""
-    <div class='other-routes'>
-        <h3>🚌 {dep_terminal}에서 출발하는 다른 주요 노선</h3>
-        <div class='route-grid'>
-    """
-    for to in others:
-        links_html += f"""
-            <a href="/{dep_terminal}-에서-{to}-가는-시외버스-시간표" class="route-card">
-                <span class="route-text">{dep_terminal} → {to}</span>
-                <span class="route-arrow">→</span>
-            </a>
-        """
-    links_html += "</div></div>"
-    return links_html
-
-# ✅ 도착지별 HTML 파일 생성
-skipped_destinations = []  # 건너뛴 도착지 목록
-last_modified_date = today_date  # 📌 기본값 설정
-
-for arr_terminal, schedule_list in schedules.items():
-    arr_terminal_original = str(arr_terminal)  # 원본 도착지명 보존
-    arr_terminal_safe = sanitize_filename(arr_terminal_original)  # 파일명용 안전한 이름
-    
-    try:
-        # ✅ 시간표 데이터가 없거나 비어있으면 건너뛰기
-        if not schedule_list or len(schedule_list) == 0:
-            print(f"⚠️  {arr_terminal_original}: 시간표 데이터가 없어 건너뜁니다.")
-            skipped_destinations.append(f"{arr_terminal_original} (데이터 없음)")
-            continue
-        
-        # ✅ 버스 시간표 데이터 처리 (새로운 JSON 구조에 맞게)
-        valid_buses = []
-        for bus in schedule_list:
-            # 시간 정보 확인 (변환된 데이터 구조)
-            dep_time_raw = bus.get('TIM_TIM') or bus.get('출발시각', '')
-            
-            if dep_time_raw and str(dep_time_raw).strip():
-                valid_buses.append(bus)
-                if len(valid_buses) <= 3:  # 처음 3개만 로그 출력
-                    print(f"   ✅ 유효한 버스: {dep_time_raw} - {bus.get('COR_NAM', bus.get('차편정보', ''))}")
-        
-        print(f"   📊 총 {len(schedule_list)}개 중 {len(valid_buses)}개 유효한 버스 발견")
-        
-        # ✅ 유효한 버스 데이터가 없으면 건너뛰기
-        if not valid_buses:
-            print(f"⚠️  {arr_terminal_original}: 유효한 시간표 데이터가 없어 건너뜁니다.")
-            skipped_destinations.append(f"{arr_terminal_original} (유효 데이터 없음)")
-            continue
-        
-        # ✅ 파일명 안전성 검사
-        if arr_terminal_original != arr_terminal_safe:
-            print(f"🔧 {arr_terminal_original}: 특수문자 포함으로 파일명을 '{arr_terminal_safe}'로 변경합니다.")
-        
-        print(f"📍 {arr_terminal_original}: {len(valid_buses)}개의 시간표로 HTML 생성 중...")
-
-        # ✅ HTML 파일명 생성 (안전한 이름 사용)
-        html_filename = f"{dep_terminal}-에서-{arr_terminal_safe}-가는-시외버스-시간표.html"
-        html_file_path = os.path.join(output_folder, html_filename)
-
-        # ✅ 현재 파일의 발행일 가져오기
-        published_date = published_dates.get(html_filename, today_date)
-
-        # ✅ 발행일이 등록되지 않았다면 JSON 파일에 저장
-        if html_filename not in published_dates:
-            published_dates[html_filename] = today_date
-
-        # ✅ 마지막 수정일
-        last_modified_date = today_date
-
-        # ✅ JSON 파일 업데이트 후 저장
-        with open(published_dates_file, "w", encoding="utf-8") as f:
-            json.dump(published_dates, f, ensure_ascii=False, indent=4)
-
-        # ✅ 버스 시간표 데이터 처리 (valid_buses 사용)
-        bus_rows = ""
-        times, durations, companies = [], [], []
-
-        for bus in valid_buses:  # 유효한 버스 데이터만 사용
-            # 새로운 JSON 구조에 맞게 시간 정보 추출
-            dep_time_raw = bus.get('TIM_TIM', bus.get('출발시각', '0000'))
-            if isinstance(dep_time_raw, str):
-                if ':' in dep_time_raw:  # "07:45" 형태
-                    dep_time = dep_time_raw
-                elif len(dep_time_raw) >= 4:  # "0745" 형태
-                    dep_time = f"{dep_time_raw[:2]}:{dep_time_raw[2:4]}"
-                else:
-                    dep_time = dep_time_raw
-            else:
-                dep_time = str(dep_time_raw)
-            
-            # 소요시간 정보 추출
-            duration_min = bus.get('LIN_TIM', 0)
-            if duration_min > 0:
-                duration = f"{duration_min//60}시간 {duration_min%60}분"
-            else:
-                duration = "정보 없음"
-            
-            # 운행회사 정보 추출
-            company = bus.get("COR_NAM", bus.get("차편정보", "정보 없음"))
-            if company and company != "정보 없음":
-                # "경남여객(일반)1:10 소요" → "경남여객" 추출
-                company = company.split('(')[0].strip()
-
-            times.append(dep_time)
-            durations.append(duration_min)
-            companies.append(company)
-
-            bus_rows += f"""
-                <tr>
-                    <td><strong>{dep_time}</strong></td>
-                    <td>{duration}</td>
-                    <td>{company}</td>
-                    <td><a href='https://www.bustago.or.kr/newweb/kr/booking/info_schedule.jsp' target='_blank' class='btn-book'><i class="fas fa-ticket-alt"></i> 예매</a></td>
-                </tr>
-            """
-
-        # ✅ 기본 정보 계산 (이 시점에서 times는 비어있지 않음을 보장)
-        first_bus = min(times) if times else "정보 없음"
-        last_bus = max(times) if times else "정보 없음"
-        avg_duration = f"{(sum(durations)//len(durations))//60}시간 {(sum(durations)//len(durations))%60}분" if durations else "정보 없음"
-        bus_count = len(times)
-
-        # ✅ 구조화 데이터 생성
-        structured_data = ""
-        if times and durations and first_bus != "정보 없음":
-            try:
-                first_bus_hour, first_bus_minute = map(int, first_bus.split(":"))
-                avg_minute_duration = sum(durations)//len(durations) if durations else 0
-                arrival_total_min = first_bus_hour * 60 + first_bus_minute + avg_minute_duration
-                arrival_hour_str = str(arrival_total_min // 60).zfill(2)
-                arrival_minute_str = str(arrival_total_min % 60).zfill(2)
-                first_bus_hour_str = str(first_bus_hour).zfill(2)
-                first_bus_minute_str = str(first_bus_minute).zfill(2)
-
-                unique_companies = list(set([c for c in companies if c != "정보 없음"]))
-                if len(unique_companies) == 1:
-                    provider_json = f'  "provider": {{"@type": "Organization", "name": "{unique_companies[0]}"}},'
-                elif len(unique_companies) > 1:
-                    provider_json = '  "provider": [' + ",".join([f'{{"@type": "Organization", "name": "{c}"}}' for c in unique_companies]) + '],'
-                else:
-                    provider_json = ''
-
-                structured_data = f"""
-            <script type="application/ld+json">
-            {{
-                "@context": "https://schema.org",
-                "@type": "BusTrip",
-                "name": "{dep_terminal}에서 {arr_terminal_original} 가는 시외버스 시간표",
-                "description": "{dep_terminal}에서 {arr_terminal_original} 가는 시외버스 시간표, 요금, 소요시간 정보",
-                {provider_json}
-                "departureBusStop": {{"@type": "BusStation", "name": "{dep_terminal} 터미널"}},
-                "arrivalBusStop": {{"@type": "BusStation", "name": "{arr_terminal_original} 터미널"}},
-                "departureTime": "{first_bus_hour_str}:{first_bus_minute_str}",
-                "arrivalTime": "{arrival_hour_str}:{arrival_minute_str}",
-                "busNumber": "{bus_count}",
-                "url": "https://bus.medilocator.co.kr/{dep_terminal}-에서-{arr_terminal_safe}-가는-시외버스-시간표"
-            }}
-            </script>
-            """
-            except (ValueError, AttributeError):
-                structured_data = ""
-
-        # ✅ 내부링크 생성 (원본 도착지명 사용)
-        related_links = generate_internal_links(route_map, dep_terminal, arr_terminal_original)
-
-        # ✅ HTML 내용 생성 (원본 도착지명을 화면 표시용으로 사용)
-        html_content = html_template.format(
-            dep_terminal=dep_terminal,
-            arr_terminal=arr_terminal_original,  # 화면에는 원본 이름 표시
-            today_date=today_date,
-            year=year,
-            bus_count=bus_count,
-            first_bus=first_bus,
-            last_bus=last_bus,
-            avg_duration=avg_duration,
-            bus_rows=bus_rows,
-            update_date=update_date,
-            published_date=published_dates.get(html_filename, today_date),
-            last_modified_date=today_date,
-            structured_data=structured_data,
-            related_links=related_links
-        )
-
-        # ✅ HTML 파일 저장
-        with open(html_file_path, "w", encoding="utf-8") as html_file:
-            html_file.write(html_content)
-
-        created_files.append(html_filename)
-        print(f"   ✅ 생성 완료: {html_filename}")
-
-    except Exception as e:
-        # ✅ 개별 노선 처리 중 오류 발생 시 해당 노선만 건너뛰고 계속 진행
-        error_msg = f"{arr_terminal_original} (오류: {str(e)})"
-        print(f"🚫 {arr_terminal_original}: 처리 중 오류 발생 - {str(e)}")
-        print(f"   ➡️  해당 노선을 건너뛰고 다음 노선을 처리합니다.")
-        skipped_destinations.append(error_msg)
+    # 🔍 JSON 파일 확인
+    if not os.path.exists(json_file_path):
+        print(f"🚫 파일을 찾을 수 없습니다: {json_file_path}")
         continue
 
-# ✅ 최종 출력 메시지
-total_destinations = len(schedules)
-generated_files = len(created_files)
-skipped_count = len(skipped_destinations)
+    # 🔍 JSON 파일 읽기
+    try:
+        with open(json_file_path, encoding='utf-8') as f:
+            bus_data = json.load(f)
+        print(f"✅ JSON 데이터 로드 완료.")
+        print(f"📊 데이터 타입: {type(bus_data)}")
+    except Exception as e:
+        print(f"🚫 JSON 파일 읽기 오류: {e}")
+        continue
 
-print(f"\n🎉 새로운 디자인의 HTML 파일 생성 완료!")
+    # ✅ JSON 데이터의 구조 확인 및 변환
+    schedules = {}  # 📌 schedules 변수 초기화
+
+    if isinstance(bus_data, list):
+        print(f"📋 리스트 형태 데이터 감지. 항목 개수: {len(bus_data)}")
+        
+        # 새로운 JSON 구조에 맞게 처리: [{"출발지": "인천", "도착지": "신갈", "스케줄": [...]}]
+        for route_item in bus_data:
+            if isinstance(route_item, dict):
+                departure = route_item.get('출발지', '')
+                destination = route_item.get('도착지', '')
+                schedule_list = route_item.get('스케줄', [])
+                
+                print(f"🚌 노선: {departure} → {destination} ({len(schedule_list)}개 스케줄)")
+                
+                if destination and schedule_list:
+                    if destination not in schedules:
+                        schedules[destination] = []
+                    
+                    # 스케줄 리스트의 각 항목을 버스 데이터로 변환
+                    for schedule in schedule_list:
+                        if isinstance(schedule, dict):
+                            # 기존 버스 데이터 형식으로 변환
+                            bus_data_converted = {
+                                'TIM_TIM': schedule.get('출발시각', '').replace(':', ''),  # "07:45" → "0745"
+                                'COR_NAM': schedule.get('차편정보', '').split('(')[0] if schedule.get('차편정보') else '정보 없음',  # "경남여객(일반)" → "경남여객"
+                                'LIN_TIM': extract_duration_minutes(schedule.get('차편정보', '')),  # "1:10 소요" → 70분
+                                'ARR_PLN': destination,
+                                'DEP_PLN': departure,
+                                '출발시각': schedule.get('출발시각', ''),
+                                '차편정보': schedule.get('차편정보', ''),
+                                '어른요금': schedule.get('어른요금', ''),
+                                '잔여좌석': schedule.get('잔여좌석', '')
+                            }
+                            schedules[destination].append(bus_data_converted)
+        
+        print(f"🔷 변환된 도착지 개수: {len(schedules)}")
+        if schedules:
+            print(f"🔷 도착지 목록: {list(schedules.keys())[:10]}")  # 처음 10개만 표시
+
+    elif isinstance(bus_data, dict):
+        print(f"📋 딕셔너리 형태 데이터 감지. 키 개수: {len(bus_data)}")
+        print(f"🔷 첫 5개 키: {list(bus_data.keys())[:5]}")
+        schedules = bus_data
+
+    else:
+        print("🚫 JSON 데이터가 올바른 형식이 아닙니다. 리스트 또는 딕셔너리 구조여야 합니다.")
+        continue
+
+    # ✅ 도착지별 HTML 파일 생성
+    skipped_destinations = []  # 현재 파일에서 건너뛴 도착지 목록
+    created_files = []  # 현재 파일에서 생성된 HTML 파일 목록
+    last_modified_date = today_date  # 📌 기본값 설정
+
+    print(f"\n📋 {dep_terminal}: 처리할 도착지 개수: {len(schedules)}")
+
+    for arr_terminal, schedule_list in schedules.items():
+        arr_terminal_original = str(arr_terminal)  # 원본 도착지명 보존
+        arr_terminal_safe = sanitize_filename(arr_terminal_original)  # 파일명용 안전한 이름
+        
+        try:
+            # ✅ 시간표 데이터가 없거나 비어있으면 건너뛰기
+            if not schedule_list or len(schedule_list) == 0:
+                print(f"⚠️  {arr_terminal_original}: 시간표 데이터가 없어 건너뜁니다.")
+                skipped_destinations.append(f"{arr_terminal_original} (데이터 없음)")
+                continue
+            
+            # ✅ 버스 시간표 데이터 처리 (새로운 JSON 구조에 맞게)
+            valid_buses = []
+            for bus in schedule_list:
+                # 시간 정보 확인 (변환된 데이터 구조)
+                dep_time_raw = bus.get('TIM_TIM') or bus.get('출발시각', '')
+                
+                if dep_time_raw and str(dep_time_raw).strip():
+                    valid_buses.append(bus)
+                    if len(valid_buses) <= 3:  # 처음 3개만 로그 출력
+                        print(f"   ✅ 유효한 버스: {dep_time_raw} - {bus.get('COR_NAM', bus.get('차편정보', ''))}")
+            
+            print(f"   📊 총 {len(schedule_list)}개 중 {len(valid_buses)}개 유효한 버스 발견")
+            
+            # ✅ 유효한 버스 데이터가 없으면 건너뛰기
+            if not valid_buses:
+                print(f"⚠️  {arr_terminal_original}: 유효한 시간표 데이터가 없어 건너뜁니다.")
+                skipped_destinations.append(f"{arr_terminal_original} (유효 데이터 없음)")
+                continue
+            
+            # ✅ 파일명 안전성 검사
+            if arr_terminal_original != arr_terminal_safe:
+                print(f"🔧 {arr_terminal_original}: 특수문자 포함으로 파일명을 '{arr_terminal_safe}'로 변경합니다.")
+            
+            print(f"📍 {arr_terminal_original}: {len(valid_buses)}개의 시간표로 HTML 생성 중...")
+
+            # ✅ HTML 파일명 생성 (안전한 이름 사용)
+            html_filename = f"{dep_terminal}-에서-{arr_terminal_safe}-가는-시외버스-시간표.html"
+            html_file_path = os.path.join(output_folder, html_filename)
+
+            # ✅ 현재 파일의 발행일 가져오기
+            published_date = published_dates.get(html_filename, today_date)
+
+            # ✅ 발행일이 등록되지 않았다면 JSON 파일에 저장
+            if html_filename not in published_dates:
+                published_dates[html_filename] = today_date
+
+            # ✅ 마지막 수정일
+            last_modified_date = today_date
+
+            # ✅ 버스 시간표 데이터 처리 (valid_buses 사용)
+            bus_rows = ""
+            times, durations, companies = [], [], []
+
+            for bus in valid_buses:  # 유효한 버스 데이터만 사용
+                # 새로운 JSON 구조에 맞게 시간 정보 추출
+                dep_time_raw = bus.get('TIM_TIM', bus.get('출발시각', '0000'))
+                if isinstance(dep_time_raw, str):
+                    if ':' in dep_time_raw:  # "07:45" 형태
+                        dep_time = dep_time_raw
+                    elif len(dep_time_raw) >= 4:  # "0745" 형태
+                        dep_time = f"{dep_time_raw[:2]}:{dep_time_raw[2:4]}"
+                    else:
+                        dep_time = dep_time_raw
+                else:
+                    dep_time = str(dep_time_raw)
+                
+                # 소요시간 정보 추출
+                duration_min = bus.get('LIN_TIM', 0)
+                if duration_min > 0:
+                    duration = f"{duration_min//60}시간 {duration_min%60}분"
+                else:
+                    duration = "정보 없음"
+                
+                # 운행회사 정보 추출
+                company = bus.get("COR_NAM", bus.get("차편정보", "정보 없음"))
+                if company and company != "정보 없음":
+                    # "경남여객(일반)1:10 소요" → "경남여객" 추출
+                    company = company.split('(')[0].strip()
+
+                times.append(dep_time)
+                durations.append(duration_min)
+                companies.append(company)
+
+                bus_rows += f"""
+                    <tr>
+                        <td><strong>{dep_time}</strong></td>
+                        <td>{duration}</td>
+                        <td>{company}</td>
+                        <td><a href='https://www.bustago.or.kr/newweb/kr/booking/info_schedule.jsp' target='_blank' class='btn-book'><i class="fas fa-ticket-alt"></i> 예매</a></td>
+                    </tr>
+                """
+
+            # ✅ 기본 정보 계산 (이 시점에서 times는 비어있지 않음을 보장)
+            first_bus = min(times) if times else "정보 없음"
+            last_bus = max(times) if times else "정보 없음"
+            avg_duration = f"{(sum(durations)//len(durations))//60}시간 {(sum(durations)//len(durations))%60}분" if durations else "정보 없음"
+            bus_count = len(times)
+
+            # ✅ 구조화 데이터 생성
+            structured_data = ""
+            if times and durations and first_bus != "정보 없음":
+                try:
+                    first_bus_hour, first_bus_minute = map(int, first_bus.split(":"))
+                    avg_minute_duration = sum(durations)//len(durations) if durations else 0
+                    arrival_total_min = first_bus_hour * 60 + first_bus_minute + avg_minute_duration
+                    arrival_hour_str = str(arrival_total_min // 60).zfill(2)
+                    arrival_minute_str = str(arrival_total_min % 60).zfill(2)
+                    first_bus_hour_str = str(first_bus_hour).zfill(2)
+                    first_bus_minute_str = str(first_bus_minute).zfill(2)
+
+                    unique_companies = list(set([c for c in companies if c != "정보 없음"]))
+                    if len(unique_companies) == 1:
+                        provider_json = f'  "provider": {{"@type": "Organization", "name": "{unique_companies[0]}"}},'
+                    elif len(unique_companies) > 1:
+                        provider_json = '  "provider": [' + ",".join([f'{{"@type": "Organization", "name": "{c}"}}' for c in unique_companies]) + '],'
+                    else:
+                        provider_json = ''
+
+                    structured_data = f"""
+                <script type="application/ld+json">
+                {{
+                    "@context": "https://schema.org",
+                    "@type": "BusTrip",
+                    "name": "{dep_terminal}에서 {arr_terminal_original} 가는 시외버스 시간표",
+                    "description": "{dep_terminal}에서 {arr_terminal_original} 가는 시외버스 시간표, 요금, 소요시간 정보",
+                    {provider_json}
+                    "departureBusStop": {{"@type": "BusStation", "name": "{dep_terminal} 터미널"}},
+                    "arrivalBusStop": {{"@type": "BusStation", "name": "{arr_terminal_original} 터미널"}},
+                    "departureTime": "{first_bus_hour_str}:{first_bus_minute_str}",
+                    "arrivalTime": "{arrival_hour_str}:{arrival_minute_str}",
+                    "busNumber": "{bus_count}",
+                    "url": "https://bus.medilocator.co.kr/{dep_terminal}-에서-{arr_terminal_safe}-가는-시외버스-시간표"
+                }}
+                </script>
+                """
+                except (ValueError, AttributeError):
+                    structured_data = ""
+
+            # ✅ 내부링크 생성 (원본 도착지명 사용)
+            related_links = generate_internal_links(route_map, dep_terminal, arr_terminal_original)
+
+            # ✅ HTML 내용 생성 (원본 도착지명을 화면 표시용으로 사용)
+            html_content = html_template.format(
+                dep_terminal=dep_terminal,
+                arr_terminal=arr_terminal_original,  # 화면에는 원본 이름 표시
+                today_date=today_date,
+                year=year,
+                bus_count=bus_count,
+                first_bus=first_bus,
+                last_bus=last_bus,
+                avg_duration=avg_duration,
+                bus_rows=bus_rows,
+                update_date=update_date,
+                published_date=published_dates.get(html_filename, today_date),
+                last_modified_date=today_date,
+                structured_data=structured_data,
+                related_links=related_links
+            )
+
+            # ✅ HTML 파일 저장
+            with open(html_file_path, "w", encoding="utf-8") as html_file:
+                html_file.write(html_content)
+
+            created_files.append(html_filename)
+            all_created_files.append(html_filename)
+            print(f"   ✅ 생성 완료: {html_filename}")
+
+        except Exception as e:
+            # ✅ 개별 노선 처리 중 오류 발생 시 해당 노선만 건너뛰고 계속 진행
+            error_msg = f"{arr_terminal_original} (오류: {str(e)})"
+            print(f"🚫 {arr_terminal_original}: 처리 중 오류 발생 - {str(e)}")
+            print(f"   ➡️  해당 노선을 건너뛰고 다음 노선을 처리합니다.")
+            skipped_destinations.append(error_msg)
+            all_skipped_destinations.extend([error_msg])
+            continue
+
+    # ✅ 현재 파일 처리 결과
+    total_destinations = len(schedules)
+    generated_files = len(created_files)
+    skipped_count = len(skipped_destinations)
+
+    print(f"\n📊 {dep_terminal} 처리 결과:")
+    print(f"   📁 전체 도착지: {total_destinations}개")
+    print(f"   ✅ 생성된 파일: {generated_files}개")
+    print(f"   ⚠️  건너뛴 도착지: {skipped_count}개")
+
+    if created_files:
+        print(f"\n📋 생성된 파일 목록:")
+        for i, file in enumerate(created_files, 1):
+            print(f"  {i:2d}. {file}")
+
+    if skipped_destinations:
+        print(f"\n⚠️  건너뛴 도착지 목록:")
+        for i, destination in enumerate(skipped_destinations, 1):
+            print(f"  {i:2d}. {destination}")
+
+# ✅ JSON 파일 업데이트 후 저장
+with open(published_dates_file, "w", encoding="utf-8") as f:
+    json.dump(published_dates, f, ensure_ascii=False, indent=4)
+
+# ✅ 최종 전체 결과
+total_json_files = len(json_files)
+total_generated_files = len(all_created_files)
+total_skipped = len(all_skipped_destinations)
+
+print(f"\n🎉 모든 JSON 파일 처리 완료!")
 print(f"📅 발행일: {today_date} | 마지막 수정일: {last_modified_date}")
-print(f"📊 처리 결과:")
-print(f"   📁 전체 도착지: {total_destinations}개")
-print(f"   ✅ 생성된 파일: {generated_files}개")
-print(f"   ⚠️  건너뛴 도착지: {skipped_count}개")
+print(f"📊 전체 처리 결과:")
+print(f"   📄 처리된 JSON 파일: {total_json_files}개")
+print(f"   ✅ 생성된 HTML 파일: {total_generated_files}개")
+print(f"   ⚠️  건너뛴 도착지: {total_skipped}개")
 
-if created_files:
-    print("\n📋 생성된 파일 목록:")
-    for i, file in enumerate(created_files, 1):
+if all_created_files:
+    print(f"\n📋 전체 생성된 파일 목록 (처음 20개):")
+    for i, file in enumerate(all_created_files[:20], 1):
         print(f"  {i:2d}. {file}")
+    if len(all_created_files) > 20:
+        print(f"  ... 외 {len(all_created_files) - 20}개 파일")
 
-if skipped_destinations:
-    print(f"\n⚠️  건너뛴 도착지 목록:")
-    for i, destination in enumerate(skipped_destinations, 1):
+if all_skipped_destinations:
+    print(f"\n⚠️  전체 건너뛴 도착지 목록 (처음 10개):")
+    for i, destination in enumerate(all_skipped_destinations[:10], 1):
         print(f"  {i:2d}. {destination}")
+    if len(all_skipped_destinations) > 10:
+        print(f"  ... 외 {len(all_skipped_destinations) - 10}개 도착지")
 
-if not created_files:
+if not all_created_files:
     print("\n🚫 생성된 HTML 파일이 없습니다. JSON 데이터를 확인하세요.")
 
 print(f"\n✨ 새로운 특징:")
@@ -1182,3 +1202,4 @@ print("  🛡️ 강화된 오류 처리 및 다양한 JSON 구조 지원")
 print("  🚫 시간표 데이터가 없는 도착지 자동 건너뛰기")
 print("  🔧 특수문자 포함 도착지명 안전 처리")
 print("  🔄 개별 노선 오류 시 자동 복구 (다음 노선 계속 처리)")
+print("  📁 data 폴더의 모든 JSON 파일 자동 처리")
