@@ -11,9 +11,9 @@
     <meta name="last-modified" content="2025-08-08">
 
     <!-- 🎯 SEO 최적화 -->
-    <title>시외버스 터미널 시간표 조회 | 첫차 막차 소요시간</title>
-    <meta name="description" content="🚌 전국 주요 시외버스 터미널 시간표를 확인하세요. 동서울, 부산, 대전복합, 광주(유스퀘어), 부산, 동대구 시간표를 빠르게 검색하세요. 첫차 및 막차 소요시간까지 확인 가능 합니다.">
-    <meta name="keywords" content="시외버스 터미널 시간표, 시외버스 시간표, 시외버스 첫차, 시외버스 막차, 동서울터미널, 대전 복합터미널, 동대구터미널">
+    <title>전국 시외버스 터미널 시간표 조회 | 첫차 막차 소요시간</title>
+    <meta name="description" content="🚌 전국 시외버스 터미널 시간표를 확인하세요. 수도권, 강원권, 충청권, 전라권, 경상권 주요 터미널 시간표를 빠르게 검색하세요. 첫차 및 막차 소요시간까지 확인 가능합니다.">
+    <meta name="keywords" content="시외버스 터미널 시간표, 시외버스 시간표, 시외버스 첫차, 시외버스 막차, 동서울터미널, 대전 복합터미널, 동대구터미널, 전국 터미널">
     <meta name="robots" content="index, follow">
     <meta name="author" content="버스 시간표 서비스">
 
@@ -21,12 +21,12 @@
     <link rel="canonical" href="https://bus.medilocator.co.kr/">
 
     <!-- 📱 Open Graph -->
-    <meta property="og:title" content="시외버스 버스 터미널 시간표 | 전국 시외버스 시간표 검색">
-    <meta property="og:description" content=" 주요 버스터미널 시간표를 한눈에! 신갈영덕, 영통입구, 오천, 인천, 이산, 여주, 아주대, 평택, 동서울, 부천 터미널 시간표를 빠르게 검색하세요.">
+    <meta property="og:title" content="전국 시외버스 터미널 시간표 | 전국 시외버스 시간표 검색">
+    <meta property="og:description" content="전국 주요 터미널 시간표를 한눈에! 수도권, 강원권, 충청권, 전라권, 경상권 터미널 시간표를 빠르게 검색하세요.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bus.medilocator.co.kr/">
     <meta property="og:image" content="https://bus.medilocator.co.kr/images/bus.jpg">
-    <meta property="og:site_name" content=" 시외버스 터미널 시간표">
+    <meta property="og:site_name" content="전국 시외버스 터미널 시간표">
     <meta property="og:locale" content="ko_KR">
 
     <!-- 🐦 Twitter Cards -->
@@ -59,7 +59,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -112,7 +112,7 @@
             z-index: 1;
         }
 
-        .terminals-section {
+        .region-section {
             background: white;
             border-radius: 24px;
             padding: 50px 40px;
@@ -120,49 +120,48 @@
             margin-bottom: 40px;
         }
 
-        .terminals-title {
-            font-size: 32px;
+        .region-title {
+            font-size: 28px;
             font-weight: 700;
-            text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: #1e293b;
-        }
-
-        .terminals-subtitle {
-            text-align: center;
-            color: #64748b;
-            margin-bottom: 50px;
-            font-size: 18px;
-        }
-
-        .terminals-list {
-            max-width: 480px;
-            margin: 0 auto;
             display: flex;
-            flex-direction: column;
-            gap: 14px;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .region-subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .terminals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
         }
 
         .terminal-button {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px 24px;
+            padding: 20px 24px;
             background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 17px;
+            border-radius: 12px;
+            font-size: 16px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 8px rgba(30, 64, 175, 0.2);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .terminal-button:hover {
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3);
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
         }
 
         .terminal-button:active {
@@ -240,6 +239,19 @@
             text-decoration: underline;
         }
 
+        /* 지역별 색상 */
+        .region-seoul .terminal-button { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
+        .region-gangwon .terminal-button { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+        .region-chungcheong .terminal-button { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); }
+        .region-jeolla .terminal-button { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+        .region-gyeongsang .terminal-button { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
+
+        .region-seoul .terminal-button:hover { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); }
+        .region-gangwon .terminal-button:hover { background: linear-gradient(135deg, #047857 0%, #065f46 100%); }
+        .region-chungcheong .terminal-button:hover { background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%); }
+        .region-jeolla .terminal-button:hover { background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%); }
+        .region-gyeongsang .terminal-button:hover { background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%); }
+
         /* 📱 반응형 디자인 */
         @media (max-width: 768px) {
             .container {
@@ -258,26 +270,23 @@
                 font-size: 16px;
             }
 
-            .terminals-section,
+            .region-section,
             .info-section {
                 padding: 30px 20px;
             }
 
-            .terminals-list {
+            .terminals-grid {
+                grid-template-columns: 1fr;
                 gap: 12px;
             }
 
             .terminal-button {
                 padding: 16px 20px;
-                font-size: 16px;
+                font-size: 15px;
             }
 
-            .terminal-button i {
-                font-size: 16px;
-            }
-
-            .terminals-title {
-                font-size: 28px;
+            .region-title {
+                font-size: 24px;
             }
         }
     </style>
@@ -287,7 +296,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "시외버스 터미널 버스 시간표",
+        "name": "전국 시외버스 터미널 시간표",
         "description": "전국 주요 시외버스 터미널 시간표를 한눈에 확인할 수 있는 사이트입니다.",
         "url": "https://bus.medilocator.co.kr/",
         "publisher": {
@@ -296,76 +305,158 @@
         }
     }
     </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "홈",
-                "item": "https://bus.medilocator.co.kr/"
-            }
-        ]
-    }
-    </script>
 </head>
 <body>
     <div class="container">
         <!-- 🎯 메인 헤더 -->
         <div class="main-header">
             <div class="header-content">
-                <h1><i class="fas fa-bus"></i>시외버스 터미널 버스 시간표</h1>
-                <p class="subtitle">전국 시외버스 터미널 시간표를 확인하세요</p>
+                <h1><i class="fas fa-bus"></i> 전국 시외버스 터미널 시간표</h1>
+                <p class="subtitle">전국 시외버스 터미널 시간표를 지역별로 확인하세요</p>
             </div>
         </div>
 
-        <!-- 🚌 터미널 목록 섹션 -->
-        <div class="terminals-section">
-            <h2 class="terminals-title">수도권 버스터미널</h2>
-            <p class="terminals-subtitle">아래 터미널을 선택하여 시간표를 확인하세요</p>
+        <!-- 🏙️ 수도권 -->
+        <div class="region-section region-seoul">
+            <h2 class="region-title">
+                <i class="fas fa-city"></i> 수도권
+            </h2>
+            <p class="region-subtitle">서울, 경기, 인천 지역 주요 터미널</p>
             
-            <div class="terminals-list">
-                <a href="/신갈영덕터미널-버스-시간표" class="terminal-button">
-                    신갈영덕터미널 시간표 조회 <i class="fas fa-bus"></i>
+            <div class="terminals-grid">
+                <a href="/인천-터미널-시외버스-시간표" class="terminal-button">
+                    인천터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/영통입구터미널-버스-시간표" class="terminal-button">
-                    영통입구터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/동서울-터미널-시외버스-시간표" class="terminal-button">
+                    동서울터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/오천터미널-버스-시간표" class="terminal-button">
-                    오천터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/영통입구-터미널-시외버스-시간표" class="terminal-button">
+                    영통입구터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/인천터미널-버스-시간표" class="terminal-button">
-                    인천터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/수원-터미널-시외버스-시간표" class="terminal-button">
+                    수원터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/이산터미널-버스-시간표" class="terminal-button">
-                    이산터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/안산-터미널-시외버스-시간표" class="terminal-button">
+                    안산터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/여주터미널-버스-시간표" class="terminal-button">
-                    여주터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/평택-터미널-시외버스-시간표" class="terminal-button">
+                    평택터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
+            </div>
+        </div>
 
-                <a href="/아주대터미널-버스-시간표" class="terminal-button">
-                    아주대터미널 시간표 조회 <i class="fas fa-bus"></i>
+        <!-- 🏔️ 강원권 -->
+        <div class="region-section region-gangwon">
+            <h2 class="region-title">
+                <i class="fas fa-tree"></i> 강원권
+            </h2>
+            <p class="region-subtitle">강원도 지역 주요 터미널</p>
+            
+            <div class="terminals-grid">
+                <a href="/춘천-터미널-시외버스-시간표" class="terminal-button">
+                    춘천터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/평택터미널-버스-시간표" class="terminal-button">
-                    평택터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/강릉-터미널-시외버스-시간표" class="terminal-button">
+                    강릉터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
-
-                <a href="/동서울터미널-버스-시간표" class="terminal-button">
-                    동서울터미널 시간표 조회 <i class="fas fa-bus"></i>
+                <a href="/원주-터미널-시외버스-시간표" class="terminal-button">
+                    원주터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
+                <a href="/속초-터미널-시외버스-시간표" class="terminal-button">
+                    속초터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/정선-터미널-시외버스-시간표" class="terminal-button">
+                    정선터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/동해-터미널-시외버스-시간표" class="terminal-button">
+                    동해터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
 
-                <a href="/부천터미널-버스-시간표" class="terminal-button">
-                    부천터미널 시간표 조회 <i class="fas fa-bus"></i>
+        <!-- 🏛️ 충청권 -->
+        <div class="region-section region-chungcheong">
+            <h2 class="region-title">
+                <i class="fas fa-university"></i> 충청권
+            </h2>
+            <p class="region-subtitle">충청남도, 충청북도 지역 주요 터미널</p>
+            
+            <div class="terminals-grid">
+                <a href="/대전-터미널-시외버스-시간표" class="terminal-button">
+                    대전터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/청주-터미널-시외버스-시간표" class="terminal-button">
+                    청주터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/천안-터미널-시외버스-시간표" class="terminal-button">
+                    천안터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/충주-터미널-시외버스-시간표" class="terminal-button">
+                    충주터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/공주-터미널-시외버스-시간표" class="terminal-button">
+                    공주터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/보령-터미널-시외버스-시간표" class="terminal-button">
+                    보령터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 🌾 전라권 -->
+        <div class="region-section region-jeolla">
+            <h2 class="region-title">
+                <i class="fas fa-spa"></i> 전라권
+            </h2>
+            <p class="region-subtitle">전라남도, 전라북도 지역 주요 터미널</p>
+            
+            <div class="terminals-grid">
+                <a href="/광주-터미널-시외버스-시간표" class="terminal-button">
+                    광주터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/전주-터미널-시외버스-시간표" class="terminal-button">
+                    전주터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/목포-터미널-시외버스-시간표" class="terminal-button">
+                    목포터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/여수-터미널-시외버스-시간표" class="terminal-button">
+                    여수터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/순천-터미널-시외버스-시간표" class="terminal-button">
+                    순천터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/익산-터미널-시외버스-시간표" class="terminal-button">
+                    익산터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 🏭 경상권 -->
+        <div class="region-section region-gyeongsang">
+            <h2 class="region-title">
+                <i class="fas fa-cogs"></i> 경상권
+            </h2>
+            <p class="region-subtitle">경상남도, 경상북도 지역 주요 터미널</p>
+            
+            <div class="terminals-grid">
+                <a href="/부산-터미널-시외버스-시간표" class="terminal-button">
+                    부산터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/대구-터미널-시외버스-시간표" class="terminal-button">
+                    대구터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/울산-터미널-시외버스-시간표" class="terminal-button">
+                    울산터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/창원-터미널-시외버스-시간표" class="terminal-button">
+                    창원터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/포항-터미널-시외버스-시간표" class="terminal-button">
+                    포항터미널 시간표 <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="/안동-터미널-시외버스-시간표" class="terminal-button">
+                    안동터미널 시간표 <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
         </div>
@@ -386,8 +477,8 @@
                 </div>
                 <div class="info-card">
                     <div class="info-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="info-card-title">터미널 위치</div>
-                    <div class="info-card-text">각 터미널의 정확한 위치와 교통편 정보를 구글 지도와 연동하여 제공합니다.</div>
+                    <div class="info-card-title">전국 터미널</div>
+                    <div class="info-card-text">수도권부터 제주도까지 전국 주요 터미널의 시간표를 지역별로 체계적으로 제공합니다.</div>
                 </div>
                 <div class="info-card">
                     <div class="info-card-icon"><i class="fas fa-mobile-alt"></i></div>
@@ -401,7 +492,7 @@
     <!-- 📝 푸터 -->
     <div class="footer">
         <p>&copy; 2025 전국 시외버스 터미널 시간표. 최신 업데이트: 2025년 8월 8일</p>
-        <p><a href="/sitemap.xml">사이트맵</a> | <a href="/rss.xml">RSS</a> | <a href="https://bus.medilocator.co.kr">기차 시간표</a></p>
+        <p><a href="/sitemap.xml">사이트맵</a> | <a href="/rss.xml">RSS</a> | <a href="https://train.medilocator.co.kr">기차 시간표</a></p>
     </div>
 
     <script>
