@@ -1,0 +1,30 @@
+# ===== Python 관련 캐시 =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== 환경 설정 파일 =====
+.env
+
+# ===== 로그 파일 =====
+*.log
+
+# ===== 데이터 / 캐시 폴더 =====
+cache/
+
+# ===== HTML 자동 생성 결과물 =====
+outputs/
+
+# ===== 민감 파일 =====
+published_dates.json
+
+# ===== OS / 에디터 불필요 파일 =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== 백업 / 임시 파일 =====
+*.bak
+*.tmp
