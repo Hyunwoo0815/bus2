@@ -23,8 +23,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - run: python app.py
     - uses: actions/configure-pages@v4
-    - uses: actions/upload-pages-artifact@v4
+    - uses: actions/upload-pages-artifact@v3
       with:
         path: './outputs'
     - uses: actions/deploy-pages@v4
-      id: deployment
