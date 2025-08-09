@@ -5,80 +5,50 @@ on:
     branches: [ main ]
     paths:
       - 'data/*.json'
-      - 'route/*.json'
       - 'app.py'
+      - 'route/*.json'
       - '.github/workflows/**'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: 코드 체크아웃
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Python 설정
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: 의존성 설치
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: 사이트 빌드
-        run: |
-          python app.py || echo "app.py 실행 중 오류 발생"
-          mkdir -p outputs
-
-      - name: 플레이스홀더 생성 (필요시)
-        run: |
-          if [ ! -f outputs/index.html ]; then
-            echo '<!doctype html><meta charset="utf-8"><title>버스 시간표</title><h1>아직 생성된 시간표가 없습니다</h1><p>data 폴더에 JSON 파일을 추가하면 자동으로 페이지가 생성됩니다.</p>' > outputs/index.html
-            echo "플레이스홀더 index.html 생성됨"
-          fi
-          echo "=== outputs 폴더 내용 ==="
-          ls -la outputs/
-
-      - name: outputs 커밋 & 푸시
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add outputs/ || true
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update outputs [skip ci]"
-            git push origin HEAD:main
-          else
-            echo "커밋할 변경 없음"
-          fi
-
-      - name: Pages 아티팩트 업로드
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./outputs
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: GitHub Pages 배포
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: 코드 체크아웃
+      uses: actions/checkout@v4
+      
+    - name: Python 설정
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: 의존성 설치
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
+    - name: 사이트 빌드
+      run: |
+        python app.py || echo "app.py 실행 중 오류 발생"
+        mkdir -p outputs
+        
+    - name: 플레이스홀더 생성 (필요시)
+      run: |
+        if [ ! -f outputs/index.html ]; then
+          echo '<!doctype html><meta charset="utf-8"><title>버스 시간표</title><h1>아직 생성된 시간표가 없습니다</h1><p>data 폴더에 JSON 파일을 추가하면 자동으로 페이지가 생성됩니다.</p>' > outputs/index.html
+          echo "플레이스홀더 index.html 생성됨"
+        fi
+        echo "=== outputs 폴더 내용 ===" 
+        ls -la outputs/
+        
+    - name: 빌드 결과 커밋 및 푸시
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add outputs/
+        if git diff --staged --quiet; then
+          echo "변경사항 없음"
+        else
+          git commit -m "🚀 Auto-generated site files [$(date '+%Y-%m-%d %H:%M:%S')]"
+          git push
+        fi
