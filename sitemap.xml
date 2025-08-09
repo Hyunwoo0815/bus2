@@ -1326,4 +1326,10 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://bus.medilocator.co.kr/%EC%9D%B8%EC%B2%9C-%ED%84%B0%EB%AF%B8%EB%84%90-%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4-%EC%8B%9C%EA%B0%84%ED%91%9C</loc>
+        <lastmod>2025-08-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
