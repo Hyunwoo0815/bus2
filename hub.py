@@ -15,40 +15,84 @@ def load_route_data():
     for json_file in json_files:
         try:
             print(f"📂 처리 중: {json_file}")
+            
+            # 파일명에서 출발지 추출 (예: 가락시장_schedules.json → 가락시장)
+            filename = os.path.basename(json_file)
+            if '_schedules.json' in filename:
+                departure = filename.replace('_schedules.json', '')
+            else:
+                # 다른 형태의 파일명도 처리
+                departure = filename.replace('.json', '').split('_')[0]
+            
+            print(f"   🚏 출발지: {departure}")
+            
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
-            # JSON이 리스트인 경우 각 항목 처리
-            if isinstance(data, list):
-                print(f"   📋 리스트 형태: {len(data)}개 항목")
-                for i, item in enumerate(data):
-                    departure = item.get('출발지', '')
-                    arrival = item.get('도착지', '')
-                    print(f"   🚌 {i+1}: {departure} → {arrival}")
-                    
-                    if departure and arrival:
-                        routes.append({
+            file_routes = []  # 이 파일에서만 추출된 노선들
+            
+            # JSON이 딕셔너리인 경우 (목적지별로 스케줄이 정리된 구조)
+            if isinstance(data, dict):
+                destinations = list(data.keys())
+                print(f"   📋 딕셔너리 형태: {len(destinations)}개 목적지")
+                
+                for i, arrival in enumerate(destinations):
+                    if arrival and departure:  # 출발지와 도착지가 모두 있는 경우
+                        route = {
                             'departure': departure,
                             'arrival': arrival,
                             'filename': f"{departure}-에서-{arrival}-가는-시외버스-시간표.html",
                             'url': f"/{departure}-에서-{arrival}-가는-시외버스-시간표"
-                        })
-            
-            # JSON이 딕셔너리인 경우
-            elif isinstance(data, dict):
-                departure = data.get('출발지', '')
-                arrival = data.get('도착지', '')
-                print(f"   📋 딕셔너리 형태: {departure} → {arrival}")
-                
-                if departure and arrival:
-                    routes.append({
-                        'departure': departure,
-                        'arrival': arrival,
-                        'filename': f"{departure}-에서-{arrival}-가는-시외버스-시간표.html",
-                        'url': f"/{departure}-에서-{arrival}-가는-시외버스-시간표"
-                    })
+                        }
+                        file_routes.append(route)
+                        
+                        # 처음 5개만 로그로 출력
+                        if i < 5:
+                            print(f"   🚌 {i+1}: {departure} → {arrival}")
+                        elif i == 5:
+                            print(f"   🚌 ... (총 {len(destinations)}개 중 일부만 표시)")
+                            
+            # JSON이 리스트인 경우 (기존 방식)
+            elif isinstance(data, list):
+                print(f"   📋 리스트 형태: {len(data)}개 항목")
+                for i, item in enumerate(data):
+                    item_departure = item.get('출발지', departure)  # 출발지가 없으면 파일명에서 추출
+                    arrival = item.get('도착지', '')
+                    
+                    if item_departure and arrival:
+                        route = {
+                            'departure': item_departure,
+                            'arrival': arrival,
+                            'filename': f"{item_departure}-에서-{arrival}-가는-시외버스-시간표.html",
+                            'url': f"/{item_departure}-에서-{arrival}-가는-시외버스-시간표"
+                        }
+                        file_routes.append(route)
+                        
+                        # 처음 5개만 로그로 출력
+                        if i < 5:
+                            print(f"   🚌 {i+1}: {item_departure} → {arrival}")
+                        elif i == 5:
+                            print(f"   🚌 ... (총 {len(data)}개 중 일부만 표시)")
             else:
                 print(f"   ⚠️ 알 수 없는 데이터 형태: {type(data)}")
+            
+            # 중복 제거
+            before_count = len(file_routes)
+            unique_routes = []
+            seen = set()
+            
+            for route in file_routes:
+                key = (route['departure'], route['arrival'])
+                if key not in seen:
+                    seen.add(key)
+                    unique_routes.append(route)
+            
+            after_count = len(unique_routes)
+            if before_count != after_count:
+                print(f"   🔄 중복 제거: {before_count}개 → {after_count}개")
+            
+            routes.extend(unique_routes)
+            print(f"   ✅ 이 파일에서 {after_count}개 노선 추가됨")
                     
         except Exception as e:
             print(f"❌ {json_file} 파일 처리 중 오류: {e}")
