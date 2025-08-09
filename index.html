@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 📅 발행일 및 수정일 메타데이터 -->
+    <meta property="article:published_time" content="2025-08-08">
+    <meta property="article:modified_time" content="2025-08-08">
+    <meta name="date" content="2025-08-08">
+    <meta name="last-modified" content="2025-08-08">
+
+    <!-- 🎯 SEO 최적화 -->
+    <title>시외버스 터미널 시간표 조회 | 첫차 막차 소요시간</title>
+    <meta name="description" content="🚌 전국 주요 시외버스 터미널 시간표를 확인하세요. 동서울, 부산, 대전복합, 광주(유스퀘어), 부산, 동대구 시간표를 빠르게 검색하세요. 첫차 및 막차 소요시간까지 확인 가능 합니다.">
+    <meta name="keywords" content="시외버스 터미널 시간표, 시외버스 시간표, 시외버스 첫차, 시외버스 막차, 동서울터미널, 대전 복합터미널, 동대구터미널">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="버스 시간표 서비스">
+
+    <!-- 🔗 Canonical URL -->
+    <link rel="canonical" href="https://bus.medilocator.co.kr/">
+
+    <!-- 📱 Open Graph -->
+    <meta property="og:title" content="시외버스 버스 터미널 시간표 | 전국 시외버스 시간표 검색">
+    <meta property="og:description" content=" 주요 버스터미널 시간표를 한눈에! 신갈영덕, 영통입구, 오천, 인천, 이산, 여주, 아주대, 평택, 동서울, 부천 터미널 시간표를 빠르게 검색하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bus.medilocator.co.kr/">
+    <meta property="og:image" content="https://bus.medilocator.co.kr/images/bus.jpg">
+    <meta property="og:site_name" content=" 시외버스 터미널 시간표">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- 🐦 Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="전국 시외버스터미널 시간표 | 전국 시외버스 시간표 검색">
+    <meta name="twitter:description" content="🚌 전국 주요 시외버스 터미널 시간표를 한눈에! 빠른 검색과 예매로 편리한 버스 여행을 시작하세요.">
+    <meta name="twitter:image" content="https://bus.medilocator.co.kr/images/bus.jpg">
+
+    <!-- 🎨 모바일 테마 -->
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- 📱 Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            100% { transform: translateX(-50px) translateY(-50px) rotate(360deg); }
+        }
+
+        .header-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .terminals-section {
+            background: white;
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .terminals-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .terminals-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .terminals-list {
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .terminal-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(30, 64, 175, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .terminal-button:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3);
+        }
+
+        .terminal-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        }
+
+        .terminal-button i {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .info-title {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e293b;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border-left: 4px solid #2563eb;
+        }
+
+        .info-card-icon {
+            font-size: 32px;
+            color: #2563eb;
+            margin-bottom: 16px;
+        }
+
+        .info-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .info-card-text {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 📱 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .header-content {
+                padding: 40px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 32px;
+            }
+
+            .header-content .subtitle {
+                font-size: 16px;
+            }
+
+            .terminals-section,
+            .info-section {
+                padding: 30px 20px;
+            }
+
+            .terminals-list {
+                gap: 12px;
+            }
+
+            .terminal-button {
+                padding: 16px 20px;
+                font-size: 16px;
+            }
+
+            .terminal-button i {
+                font-size: 16px;
+            }
+
+            .terminals-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <!-- 📊 구조화된 데이터 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "시외버스 터미널 버스 시간표",
+        "description": "전국 주요 시외버스 터미널 시간표를 한눈에 확인할 수 있는 사이트입니다.",
+        "url": "https://bus.medilocator.co.kr/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "버스 시간표 서비스"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://bus.medilocator.co.kr/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 🎯 메인 헤더 -->
+        <div class="main-header">
+            <div class="header-content">
+                <h1><i class="fas fa-bus"></i>시외버스 터미널 버스 시간표</h1>
+                <p class="subtitle">전국 시외버스 터미널 시간표를 확인하세요</p>
+            </div>
+        </div>
+
+        <!-- 🚌 터미널 목록 섹션 -->
+        <div class="terminals-section">
+            <h2 class="terminals-title">수도권 버스터미널</h2>
+            <p class="terminals-subtitle">아래 터미널을 선택하여 시간표를 확인하세요</p>
+            
+            <div class="terminals-list">
+                <a href="/신갈영덕터미널-버스-시간표" class="terminal-button">
+                    신갈영덕터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/영통입구터미널-버스-시간표" class="terminal-button">
+                    영통입구터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/오천터미널-버스-시간표" class="terminal-button">
+                    오천터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/인천터미널-버스-시간표" class="terminal-button">
+                    인천터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/이산터미널-버스-시간표" class="terminal-button">
+                    이산터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/여주터미널-버스-시간표" class="terminal-button">
+                    여주터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/아주대터미널-버스-시간표" class="terminal-button">
+                    아주대터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/평택터미널-버스-시간표" class="terminal-button">
+                    평택터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/동서울터미널-버스-시간표" class="terminal-button">
+                    동서울터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+
+                <a href="/부천터미널-버스-시간표" class="terminal-button">
+                    부천터미널 시간표 조회 <i class="fas fa-bus"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 📊 서비스 정보 -->
+        <div class="info-section">
+            <h2 class="info-title"><i class="fas fa-info-circle"></i> 서비스 안내</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-card-title">실시간 시간표</div>
+                    <div class="info-card-text">최신 버스 시간표 정보를 실시간으로 제공합니다. 첫차, 막차, 소요시간을 정확하게 확인하세요.</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="info-card-title">간편한 예매</div>
+                    <div class="info-card-text">버스타고, 코버스, 티머니 등 공식 예매 사이트로 바로 연결하여 편리하게 예매할 수 있습니다.</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-card-title">터미널 위치</div>
+                    <div class="info-card-text">각 터미널의 정확한 위치와 교통편 정보를 구글 지도와 연동하여 제공합니다.</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="info-card-title">모바일 최적화</div>
+                    <div class="info-card-text">스마트폰, 태블릿 등 모든 기기에서 편리하게 이용할 수 있도록 최적화되었습니다.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📝 푸터 -->
+    <div class="footer">
+        <p>&copy; 2025 전국 시외버스 터미널 시간표. 최신 업데이트: 2025년 8월 8일</p>
+        <p><a href="/sitemap.xml">사이트맵</a> | <a href="/rss.xml">RSS</a> | <a href="https://bus.medilocator.co.kr">기차 시간표</a></p>
+    </div>
+
+    <script>
+        // 터미널 버튼 클릭 애니메이션
+        document.addEventListener('DOMContentLoaded', function() {
+            const terminalButtons = document.querySelectorAll('.terminal-button');
+            terminalButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
