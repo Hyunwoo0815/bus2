@@ -36,9 +36,9 @@ jobs:
       uses: actions/configure-pages@v3
       
     - name: 빌드 결과 업로드
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: './outputs'  # 생성되는 폴더명으로 변경
         
     - name: GitHub Pages 배포
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
