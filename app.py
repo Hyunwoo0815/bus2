@@ -142,7 +142,6 @@ html_template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3349170217265964" crossorigin="anonymous"></script>
     
     <!-- 📅 발행일 및 수정일 메타데이터 (property와 name 혼용) -->
     <meta property="article:published_time" content="{published_date}">
@@ -1202,4 +1201,5 @@ print("  🛡️ 강화된 오류 처리 및 다양한 JSON 구조 지원")
 print("  🚫 시간표 데이터가 없는 도착지 자동 건너뛰기")
 print("  🔧 특수문자 포함 도착지명 안전 처리")
 print("  🔄 개별 노선 오류 시 자동 복구 (다음 노선 계속 처리)")
+
 print("  📁 data 폴더의 모든 JSON 파일 자동 처리")
