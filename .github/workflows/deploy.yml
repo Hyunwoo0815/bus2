@@ -5,22 +5,13 @@ on:
     branches: [ main ]
     paths:
       - 'data/*.json'
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+      - 'app.py'
 
 jobs:
   build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
@@ -38,14 +29,8 @@ jobs:
       - name: 사이트 빌드
         run: python app.py
         
-      - name: Pages 설정
-        uses: actions/configure-pages@v4
-        
-      - name: 빌드 결과 업로드
-        uses: actions/upload-pages-artifact@v4
+      - name: gh-pages 브랜치로 배포
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: './outputs'
-          
-      - name: GitHub Pages 배포
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./outputs
