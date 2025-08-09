@@ -8,12 +8,10 @@ on:
       - 'route/*.json'
       - 'app.py'
       - '.github/workflows/**'
-    paths-ignore:
-      - 'outputs/**'         # outputs 커밋으로 인한 재실행 방지
   workflow_dispatch:
 
 permissions:
-  contents: write            # ← outputs 커밋/푸시 위해 write 필요
+  contents: write
   pages: write
   id-token: write
 
@@ -28,7 +26,7 @@ jobs:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
         with:
-          persist-credentials: true   # GITHUB_TOKEN으로 push
+          persist-credentials: true
 
       - name: Python 설정
         uses: actions/setup-python@v5
@@ -54,7 +52,6 @@ jobs:
           echo "=== outputs 폴더 내용 ==="
           ls -la outputs/
 
-      # === 여기서 outputs/를 레포에 커밋 & 푸시 ===
       - name: outputs 커밋 & 푸시
         run: |
           git config user.name  "github-actions[bot]"
