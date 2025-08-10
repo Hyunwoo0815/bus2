@@ -807,7 +807,7 @@ html_template = """<!DOCTYPE html>
         <div class="train-section">
             <h2 class="booking-title"><i class="fas fa-train"></i> 기차 시간표도 확인해보세요</h2>
             <p class="booking-subtitle">버스 외에 기차 시간표도 함께 비교해서 더 편리한 교통편을 선택하세요</p>
-            <a href="https://time.guide-lee.co.kr" target="_blank" class="train-btn">
+            <a href="https://bus.medilocator.co.kr" target="_self" class="train-btn">
                 <i class="fas fa-train"></i>
                 <span>기차 시간표 확인하기</span>
             </a>
@@ -1048,7 +1048,7 @@ for json_file_path in json_files:
                         <td><strong>{dep_time}</strong></td>
                         <td>{duration}</td>
                         <td>{company}</td>
-                        <td><a href='https://www.bustago.or.kr/newweb/kr/booking/info_schedule.jsp' target='_blank' class='btn-book'><i class="fas fa-ticket-alt"></i> 예매</a></td>
+                        <td><a href='https://www.bustago.or.kr/newweb/kr/booking/info_schedule.jsp' target='_self' class='btn-book'><i class="fas fa-ticket-alt"></i> 예매</a></td>
                     </tr>
                 """
 
@@ -1203,4 +1203,5 @@ print("  🔧 특수문자 포함 도착지명 안전 처리")
 print("  🔄 개별 노선 오류 시 자동 복구 (다음 노선 계속 처리)")
 
 print("  📁 data 폴더의 모든 JSON 파일 자동 처리")
+
 
