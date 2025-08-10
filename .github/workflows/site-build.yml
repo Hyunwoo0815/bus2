@@ -145,14 +145,7 @@ jobs:
         
         # 커밋 및 푸시 (항상 실행)
         echo "=== 커밋 진행 ==="
-        git commit -m "🚀 Daily site update [$(date '+%Y-%m-%d %H:%M:%S')] 
-
-📊 Generated files:
-- Route pages: $(ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l)
-- Terminal pages: $(ls -1 *터미널*.html 2>/dev/null | wc -l)  
-- Other files: $(ls -1 *.json *.xml *.txt 2>/dev/null | wc -l)
-
-🕐 Auto-triggered at KST 00:05"
+        git commit -m "🚀 Daily site update [$(date '+%Y-%m-%d %H:%M:%S')] - 📊 Generated files: Route pages: $(ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l), Terminal pages: $(ls -1 *터미널*.html 2>/dev/null | wc -l), Other files: $(ls -1 *.json *.xml *.txt 2>/dev/null | wc -l) - 🕐 Auto-triggered at KST 00:05"
         
         echo "=== 푸시 진행 ==="
         git push origin main --verbose
