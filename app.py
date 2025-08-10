@@ -721,7 +721,7 @@ html_template = """<!DOCTYPE html>
                     <div class="info-card">
                         <div class="info-card-title"><i class="fas fa-map-marker-alt"></i> 출발 터미널</div>
                         <div class="info-card-value">
-                            <a href="https://www.google.com/maps/search/{dep_terminal} 터미널" target="_blank" style="color: #2563eb; text-decoration: none;">
+                            <a href="https://www.google.com/maps/search/{dep_terminal} 터미널" target="_self" style="color: #2563eb; text-decoration: none;">
                                 {dep_terminal}
                             </a>
                         </div>
@@ -765,15 +765,15 @@ html_template = """<!DOCTYPE html>
             <h2 class="booking-title"><i class="fas fa-ticket-alt"></i> 빠른 예매하기</h2>
             <p class="booking-subtitle">아래 공식 예매 사이트에서 실시간 좌석을 확인하고 예약하세요</p>
             <div class="booking-grid">
-                <a href="https://www.bustago.or.kr" target="_blank" class="booking-btn btn-bustago">
+                <a href="https://www.bustago.or.kr" target="_self" class="booking-btn btn-bustago">
                     <i class="fas fa-bus"></i>
                     <span>버스타고</span>
                 </a>
-                <a href="https://www.t-money.co.kr" target="_blank" class="booking-btn btn-tmoney">
+                <a href="https://txbus.t-money.co.kr/" target="_self" class="booking-btn btn-tmoney">
                     <i class="fas fa-credit-card"></i>
                     <span>티머니</span>
                 </a>
-                <a href="https://www.kobus.co.kr" target="_blank" class="booking-btn btn-kobus">
+                <a href="https://www.kobus.co.kr" target="_self" class="booking-btn btn-kobus">
                     <i class="fas fa-globe"></i>
                     <span>코버스</span>
                 </a>
@@ -794,7 +794,7 @@ html_template = """<!DOCTYPE html>
         <div class="hub-section">
             <h2 class="booking-title"><i class="fas fa-map"></i> {dep_terminal} 전체 노선 보기</h2>
             <p class="booking-subtitle">{dep_terminal}에서 출발하는 모든 버스 노선을 한 번에 확인하세요</p>
-            <a href="/{dep_terminal}-시외버스터미널-버스-시간표" class="hub-btn">
+            <a href="/{dep_terminal}-터미널-시외버스-시간표" class="hub-btn">
                 <i class="fas fa-list"></i>
                 <span>{dep_terminal} 전체 시간표</span>
             </a>
@@ -1203,3 +1203,4 @@ print("  🔧 특수문자 포함 도착지명 안전 처리")
 print("  🔄 개별 노선 오류 시 자동 복구 (다음 노선 계속 처리)")
 
 print("  📁 data 폴더의 모든 JSON 파일 자동 처리")
+
