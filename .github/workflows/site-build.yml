@@ -51,51 +51,69 @@ jobs:
         mkdir -p outputs
         echo "=== outputs 폴더 생성 후 내용 ==="
         ls -la outputs/ || echo "outputs 폴더 비어있음"
-        
-    - name: 플레이스홀더 생성 (필요시)
+
+    - name: 터미널 페이지 디버깅 및 검증
       run: |
-        echo "=== outputs 폴더 내용 ===" 
-        ls -la outputs/
+        echo "=== 1. hub.py 실행 후 outputs 확인 ==="
+        ls -la outputs/ 2>/dev/null || echo "outputs 폴더 없음"
+        
+        echo "=== 2. 터미널 페이지 존재 여부 확인 ==="
+        if ls outputs/*터미널*.html 1> /dev/null 2>&1; then
+          echo "✅ 터미널 페이지 발견:"
+          ls -la outputs/*터미널*.html
+        else
+          echo "❌ 터미널 페이지가 outputs에 없음!"
+          echo "=== hub.py 재실행 및 로그 확인 ==="
+          python -c "
+import subprocess
+result = subprocess.run(['python', 'hub.py'], capture_output=True, text=True)
+print('STDOUT:', result.stdout)
+print('STDERR:', result.stderr)
+print('Return code:', result.returncode)
+"
+          echo "=== 전체 시스템에서 터미널 파일 찾기 ==="
+          find . -name "*터미널*" -type f 2>/dev/null || echo "시스템에 터미널 파일 없음"
+          exit 1
+        fi
         
     - name: 파일을 root로 복사
       run: |
-        # outputs 폴더의 모든 내용 확인
         echo "=== outputs 폴더 전체 내용 ==="
         ls -la outputs/ 2>/dev/null || echo "outputs 폴더 없음"
         
-        # 터미널 페이지들이 있는지 확인
-        echo "=== 터미널 페이지 확인 ==="
-        ls -la outputs/*-터미널-시외버스-시간표.html 2>/dev/null || echo "터미널 페이지 없음"
-        
-        # 파일들을 root로 복사 (터미널 페이지 포함)
+        # 기본 파일들 복사
         cp outputs/*.json . 2>/dev/null || true
         cp outputs/*.xml . 2>/dev/null || true
         cp outputs/*.txt . 2>/dev/null || true
         cp outputs/*-에서-*-가는-시외버스-시간표.html . 2>/dev/null || true
         
-        # 터미널 페이지 강제 복사 (에러 체크 포함)
+        # 터미널 페이지 복사 (에러 발생시 중단)
         echo "=== 터미널 페이지 복사 시작 ==="
-        if ls outputs/*-터미널-시외버스-시간표.html 1> /dev/null 2>&1; then
-          cp outputs/*-터미널-시외버스-시간표.html .
-          echo "✅ 터미널 페이지 복사 완료"
-          ls -la *-터미널-시외버스-시간표.html
-        else
-          echo "❌ outputs 폴더에 터미널 페이지가 없습니다"
-          echo "=== outputs 폴더 전체 목록 ==="
+        cp outputs/*터미널*.html . || {
+          echo "❌ 터미널 페이지 복사 실패!"
           ls -la outputs/
           exit 1
-        fi
+        }
+        
+        # 터미널 페이지에 강제 업데이트 타임스탬프 추가
+        echo "=== 터미널 페이지 강제 업데이트 ==="
+        for file in *터미널*.html; do
+          if [ -f "$file" ]; then
+            echo "<!-- Force update: $(date '+%Y-%m-%d %H:%M:%S %Z') -->" >> "$file"
+            echo "✅ $file 강제 업데이트 완료"
+          fi
+        done
         
         # index.html이 복사되었다면 삭제
         rm -f index.html 2>/dev/null || true
         
-        echo "=== 복사된 파일들 ===" 
+        echo "=== 최종 복사된 파일들 확인 ===" 
         echo "--- 노선 시간표 파일들 ---"
-        ls -la *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "노선 페이지:"
+        ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "노선 페이지:"
         echo "--- 터미널 허브 파일들 ---"
-        ls -la *-터미널-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "터미널 페이지:"
+        ls -1 *터미널*.html 2>/dev/null | wc -l | xargs echo "터미널 페이지:"
         echo "--- 기타 파일들 ---"
-        ls -la *.json *.xml *.txt 2>/dev/null || echo "기타 파일 없음"
+        ls -1 *.json *.xml *.txt 2>/dev/null | wc -l | xargs echo "기타 파일:"
         
     - name: 빌드 결과 커밋 및 푸시
       run: |
@@ -113,17 +131,17 @@ jobs:
         echo "--- 노선 시간표 파일들 ---"
         ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "노선 페이지 수:"
         echo "--- 터미널 허브 파일들 ---"  
-        ls -1 *-터미널-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "터미널 페이지 수:"
+        ls -1 *터미널*.html 2>/dev/null | wc -l | xargs echo "터미널 페이지 수:"
         
         # 파일들을 강제로 add
         echo "=== 파일 추가 중 ==="
         git add *-에서-*-가는-시외버스-시간표.html 2>/dev/null || echo "노선 파일 없음"
-        git add *-터미널-시외버스-시간표.html 2>/dev/null || echo "터미널 파일 없음"  
+        git add *터미널*.html 2>/dev/null || echo "터미널 파일 없음"  
         git add *.json *.xml *.txt 2>/dev/null || echo "기타 파일 없음"
         
         # 강제로 타임스탬프 파일 생성 (변경사항이 없어도 커밋하기 위해)
         echo "Last build: $(date '+%Y-%m-%d %H:%M:%S %Z')" > .build-timestamp
-        echo "Build trigger: scheduled" >> .build-timestamp
+        echo "Build trigger: $([ '${{ github.event_name }}' = 'workflow_dispatch' ] && echo 'manual' || echo 'scheduled')" >> .build-timestamp
         git add .build-timestamp
         
         echo "=== git status (after add) ==="
@@ -134,13 +152,13 @@ jobs:
         # 커밋 및 푸시 (항상 실행)
         echo "=== 커밋 진행 ==="
         git commit -m "🚀 Daily site update [$(date '+%Y-%m-%d %H:%M:%S')] 
-        
-        📊 Generated files:
-        - Route pages: $(ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l)
-        - Terminal pages: $(ls -1 *-터미널-시외버스-시간표.html 2>/dev/null | wc -l)  
-        - Other files: $(ls -1 *.json *.xml *.txt 2>/dev/null | wc -l)
-        
-        🕐 Auto-triggered at KST 00:05"
+
+📊 Generated files:
+- Route pages: $(ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l)
+- Terminal pages: $(ls -1 *터미널*.html 2>/dev/null | wc -l)  
+- Other files: $(ls -1 *.json *.xml *.txt 2>/dev/null | wc -l)
+
+🕐 Auto-triggered at KST 00:05"
         
         echo "=== 푸시 진행 ==="
         git push origin main --verbose
