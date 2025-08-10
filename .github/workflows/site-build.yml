@@ -1,15 +1,8 @@
 name: 사이트 빌드 및 배포
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'data/*.json'
-      - 'app.py'
-      - 'route/*.json'
-      - '.github/workflows/**'
   schedule:
-    - cron: '0 2 * * *'  # 매일 오전 11시 (한국시간 UTC+9)
+    - cron: '5 15 * * *'  # 매일 UTC 15:05 (한국시간 00:05)
   workflow_dispatch:  # 수동 실행 가능
 
 jobs:
