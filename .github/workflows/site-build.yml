@@ -64,13 +64,7 @@ jobs:
         else
           echo "❌ 터미널 페이지가 outputs에 없음!"
           echo "=== hub.py 재실행 및 로그 확인 ==="
-          python -c "
-import subprocess
-result = subprocess.run(['python', 'hub.py'], capture_output=True, text=True)
-print('STDOUT:', result.stdout)
-print('STDERR:', result.stderr)
-print('Return code:', result.returncode)
-"
+          python -c "import subprocess; result = subprocess.run(['python', 'hub.py'], capture_output=True, text=True); print('STDOUT:', result.stdout); print('STDERR:', result.stderr); print('Return code:', result.returncode)"
           echo "=== 전체 시스템에서 터미널 파일 찾기 ==="
           find . -name "*터미널*" -type f 2>/dev/null || echo "시스템에 터미널 파일 없음"
           exit 1
