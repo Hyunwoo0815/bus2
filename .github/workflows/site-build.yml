@@ -98,9 +98,16 @@ jobs:
         echo "=== staged files ==="
         git diff --staged --name-only
         
-        if git diff --staged --quiet; then
-          echo "변경사항 없음"
+        # 변경사항이 있든 없든 항상 커밋 (강제 업데이트)
+        if git diff --staged --name-only | grep -q .; then
+          echo "📝 파일이 스테이징됨 - 강제 커밋 진행"
+          git commit -m "🚀 Auto-generated site files [$(date '+%Y-%m-%d %H:%M:%S')] - 강제 업데이트"
+          git push
         else
-          git commit -m "🚀 Auto-generated site files [$(date '+%Y-%m-%d %H:%M:%S')]"
+          echo "📝 스테이징된 파일이 없음 - 더미 커밋으로 강제 업데이트"
+          # 타임스탬프 파일을 만들어서 강제로 변경사항 생성
+          echo "Last updated: $(date)" > .last-update
+          git add .last-update
+          git commit -m "🕐 Daily update trigger [$(date '+%Y-%m-%d %H:%M:%S')]"
           git push
         fi
