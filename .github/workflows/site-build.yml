@@ -5,6 +5,11 @@ on:
     - cron: '5 15 * * *'  # 매일 UTC 15:05 (한국시간 00:05)
   workflow_dispatch:  # 수동 실행 가능
 
+permissions:
+  contents: write  # 저장소에 쓰기 권한 필요
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +17,9 @@ jobs:
     steps:
     - name: 코드 체크아웃
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
       
     - name: Python 설정
       uses: actions/setup-python@v5
@@ -78,8 +86,14 @@ jobs:
         
     - name: 빌드 결과 커밋 및 푸시
       run: |
+        # Git 설정
         git config --local user.email "hyunwoohappy@gmail.com"
         git config --local user.name "Hyunwoo0815"
+        
+        # 현재 브랜치 확인
+        echo "=== 현재 브랜치 정보 ==="
+        git branch -a
+        git status
         
         # 모든 생성된 HTML 파일들을 add
         echo "=== 커밋할 파일들 확인 ==="
@@ -88,26 +102,35 @@ jobs:
         echo "--- 터미널 허브 파일들 ---"  
         ls -1 *-터미널-시외버스-시간표.html 2>/dev/null | wc -l | xargs echo "터미널 페이지 수:"
         
-        # 생성된 파일들만 선택적으로 add (index.html과 CNAME 등 제외)
-        git add *-에서-*-가는-시외버스-시간표.html 2>/dev/null || true
-        git add *-터미널-시외버스-시간표.html 2>/dev/null || true
-        git add *.json *.xml *.txt 2>/dev/null || true
+        # 파일들을 강제로 add
+        echo "=== 파일 추가 중 ==="
+        git add *-에서-*-가는-시외버스-시간표.html 2>/dev/null || echo "노선 파일 없음"
+        git add *-터미널-시외버스-시간표.html 2>/dev/null || echo "터미널 파일 없음"  
+        git add *.json *.xml *.txt 2>/dev/null || echo "기타 파일 없음"
         
-        echo "=== git status ==="
+        # 강제로 타임스탬프 파일 생성 (변경사항이 없어도 커밋하기 위해)
+        echo "Last build: $(date '+%Y-%m-%d %H:%M:%S %Z')" > .build-timestamp
+        echo "Build trigger: scheduled" >> .build-timestamp
+        git add .build-timestamp
+        
+        echo "=== git status (after add) ==="
         git status
         echo "=== staged files ==="
         git diff --staged --name-only
         
-        # 변경사항이 있든 없든 항상 커밋 (강제 업데이트)
-        if git diff --staged --name-only | grep -q .; then
-          echo "📝 파일이 스테이징됨 - 강제 커밋 진행"
-          git commit -m "🚀 Auto-generated site files [$(date '+%Y-%m-%d %H:%M:%S')] - 강제 업데이트"
-          git push
-        else
-          echo "📝 스테이징된 파일이 없음 - 더미 커밋으로 강제 업데이트"
-          # 타임스탬프 파일을 만들어서 강제로 변경사항 생성
-          echo "Last updated: $(date)" > .last-update
-          git add .last-update
-          git commit -m "🕐 Daily update trigger [$(date '+%Y-%m-%d %H:%M:%S')]"
-          git push
-        fi
+        # 커밋 및 푸시 (항상 실행)
+        echo "=== 커밋 진행 ==="
+        git commit -m "🚀 Daily site update [$(date '+%Y-%m-%d %H:%M:%S')] 
+        
+        📊 Generated files:
+        - Route pages: $(ls -1 *-에서-*-가는-시외버스-시간표.html 2>/dev/null | wc -l)
+        - Terminal pages: $(ls -1 *-터미널-시외버스-시간표.html 2>/dev/null | wc -l)  
+        - Other files: $(ls -1 *.json *.xml *.txt 2>/dev/null | wc -l)
+        
+        🕐 Auto-triggered at KST 00:05"
+        
+        echo "=== 푸시 진행 ==="
+        git push origin main --verbose
+        
+        echo "=== 푸시 완료 확인 ==="
+        git log --oneline -1
