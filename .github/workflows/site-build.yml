@@ -67,11 +67,24 @@ jobs:
         echo "=== 터미널 페이지 확인 ==="
         ls -la outputs/*-터미널-시외버스-시간표.html 2>/dev/null || echo "터미널 페이지 없음"
         
-        # 파일들을 root로 복사
+        # 파일들을 root로 복사 (터미널 페이지 포함)
         cp outputs/*.json . 2>/dev/null || true
         cp outputs/*.xml . 2>/dev/null || true
         cp outputs/*.txt . 2>/dev/null || true
-        cp outputs/*-시외버스-시간표.html . 2>/dev/null || true
+        cp outputs/*-에서-*-가는-시외버스-시간표.html . 2>/dev/null || true
+        
+        # 터미널 페이지 강제 복사 (에러 체크 포함)
+        echo "=== 터미널 페이지 복사 시작 ==="
+        if ls outputs/*-터미널-시외버스-시간표.html 1> /dev/null 2>&1; then
+          cp outputs/*-터미널-시외버스-시간표.html .
+          echo "✅ 터미널 페이지 복사 완료"
+          ls -la *-터미널-시외버스-시간표.html
+        else
+          echo "❌ outputs 폴더에 터미널 페이지가 없습니다"
+          echo "=== outputs 폴더 전체 목록 ==="
+          ls -la outputs/
+          exit 1
+        fi
         
         # index.html이 복사되었다면 삭제
         rm -f index.html 2>/dev/null || true
