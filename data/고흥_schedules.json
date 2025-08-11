@@ -1,0 +1,1664 @@
+{
+  "화순": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 80,
+      "COR_NAM": "광우고속(우등)"
+    }
+  ],
+  "인천": [
+    {
+      "TIM_TIM": "0815",
+      "LIN_TIM": 310,
+      "COR_NAM": "동방고속(우등)"
+    }
+  ],
+  "학동": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 100,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1333",
+      "LIN_TIM": 100,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1453",
+      "LIN_TIM": 100,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 110,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1922",
+      "LIN_TIM": 100,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 110,
+      "COR_NAM": "광우고속(우등)"
+    }
+  ],
+  "순천": [
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0750",
+      "LIN_TIM": 62,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 50,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 63,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 50,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 62,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1830",
+      "LIN_TIM": 62,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 63,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 50,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "포두": [
+    {
+      "TIM_TIM": "0805",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "도화": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 21,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "녹동": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 15,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "강진(전남)": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 76,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "목포": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 95,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "나로도": [
+    {
+      "TIM_TIM": "0805",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1125",
+      "LIN_TIM": 35,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 39,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "광양": [
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 83,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 83,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 52,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "순천역": [
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 53,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 55,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 66,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 55,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "거금도휴게소": [
+    {
+      "TIM_TIM": "1230",
+      "LIN_TIM": 25,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "벌교": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0750",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 30,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 35,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 35,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 35,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 35,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1333",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1453",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 40,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 25,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1830",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1922",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 32,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 40,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 25,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 32,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "백양": [
+    {
+      "TIM_TIM": "0805",
+      "LIN_TIM": 33,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 31,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "광주(유스퀘어)": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 120,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1333",
+      "LIN_TIM": 120,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1453",
+      "LIN_TIM": 120,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 130,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1922",
+      "LIN_TIM": 120,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 130,
+      "COR_NAM": "광우고속(우등)"
+    }
+  ],
+  "섬진강휴게소": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 61,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "과역": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0750",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 10,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 15,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1333",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1453",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 15,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 10,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1830",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1922",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 12,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 15,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 10,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 14,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "여수": [
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 103,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 100,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 117,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 116,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 100,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "나로도(완)": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 39,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "여천": [
+    {
+      "TIM_TIM": "0620",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0832",
+      "LIN_TIM": 83,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0924",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1025",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1057",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1247",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1320",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1419",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1635",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1710",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1742",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 97,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1900",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 96,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "2100",
+      "LIN_TIM": 80,
+      "COR_NAM": "동방고속(일반)"
+    }
+  ],
+  "안산": [
+    {
+      "TIM_TIM": "0815",
+      "LIN_TIM": 270,
+      "COR_NAM": "동방고속(우등)"
+    }
+  ],
+  "광영": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 61,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "곡천": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 60,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 60,
+      "COR_NAM": "광우고속(우등)"
+    }
+  ],
+  "부산서부(사상)": [
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 200,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 223,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 223,
+      "COR_NAM": "동방고속(우등)"
+    }
+  ],
+  "녹동신항": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 18,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "섬진강(상행)": [
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 85,
+      "COR_NAM": "동방고속(우등)"
+    }
+  ],
+  "동광양(중마)": [
+    {
+      "TIM_TIM": "1031",
+      "LIN_TIM": 103,
+      "COR_NAM": "금호고속(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 103,
+      "COR_NAM": "동방고속(우등)"
+    }
+  ],
+  "남성": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 26,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "소록도": [
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 22,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ],
+  "소태역": [
+    {
+      "TIM_TIM": "0600",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0635",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0723",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0743",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "0823",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "0946",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1003",
+      "LIN_TIM": 95,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1023",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1106",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1253",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1313",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1333",
+      "LIN_TIM": 95,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1353",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(우등)"
+    },
+    {
+      "TIM_TIM": "1453",
+      "LIN_TIM": 95,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1533",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1553",
+      "LIN_TIM": 105,
+      "COR_NAM": "동방고속(일반)"
+    },
+    {
+      "TIM_TIM": "1723",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "1922",
+      "LIN_TIM": 95,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2022",
+      "LIN_TIM": 105,
+      "COR_NAM": "광우고속(우등)"
+    },
+    {
+      "TIM_TIM": "2359",
+      "LIN_TIM": 83,
+      "COR_NAM": "공동운수(일반)"
+    }
+  ]
+}

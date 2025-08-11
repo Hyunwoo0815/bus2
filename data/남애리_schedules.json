@@ -1,0 +1,457 @@
+{
+  "주문진": [
+    {
+      "TIM_TIM": "0844",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1028",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1246",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1341",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1601",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1721",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1931",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2142",
+      "LIN_TIM": 15,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "인구": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 5,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "하조대": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 13,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "손양": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 23,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "아산병원(강릉)": [
+    {
+      "TIM_TIM": "0844",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1028",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1246",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1341",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1601",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1721",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1931",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2142",
+      "LIN_TIM": 25,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "낙산": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 38,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "강릉": [
+    {
+      "TIM_TIM": "0844",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1028",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1246",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1341",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1601",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1721",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1931",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2142",
+      "LIN_TIM": 40,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "속초": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 67,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "양양": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 29,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ],
+  "물치": [
+    {
+      "TIM_TIM": "0751",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "0951",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1051",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1203",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1301",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1446",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1651",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "1808",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    },
+    {
+      "TIM_TIM": "2123",
+      "LIN_TIM": 48,
+      "COR_NAM": "강원여객(일반)"
+    }
+  ]
+}

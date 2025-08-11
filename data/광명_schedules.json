@@ -1,0 +1,366 @@
+{
+  "어송": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 123,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 123,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 123,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 123,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 123,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "음암": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 95,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 95,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 95,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 95,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 95,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "태안": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 133,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 133,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 133,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 133,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 133,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "당진": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 60,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 60,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 60,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 60,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 60,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "서산": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 105,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 105,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 105,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 105,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 105,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "기지시": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 55,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 55,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 55,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 55,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 55,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ],
+  "운산": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0745",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0915",
+      "LIN_TIM": 85,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1045",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1215",
+      "LIN_TIM": 85,
+      "COR_NAM": "한양고속(일반)"
+    },
+    {
+      "TIM_TIM": "1345",
+      "LIN_TIM": 85,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "1515",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1655",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1845",
+      "LIN_TIM": 85,
+      "COR_NAM": "한양고속(우등)"
+    },
+    {
+      "TIM_TIM": "2015",
+      "LIN_TIM": 85,
+      "COR_NAM": "충남고속(우등)"
+    }
+  ]
+}

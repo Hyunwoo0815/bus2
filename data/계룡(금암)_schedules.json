@@ -1,0 +1,274 @@
+{
+  "엄사": [
+    {
+      "TIM_TIM": "0500",
+      "LIN_TIM": 8,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "0630",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1010",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1420",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1530",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 8,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1910",
+      "LIN_TIM": 8,
+      "COR_NAM": "중부고속(우등)"
+    }
+  ],
+  "인천공항1터미널": [
+    {
+      "TIM_TIM": "0500",
+      "LIN_TIM": 193,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 193,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 193,
+      "COR_NAM": "삼흥고속(우등)"
+    }
+  ],
+  "남선(신도안)": [
+    {
+      "TIM_TIM": "0500",
+      "LIN_TIM": 13,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "0630",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1010",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1420",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1530",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 13,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1910",
+      "LIN_TIM": 13,
+      "COR_NAM": "중부고속(우등)"
+    }
+  ],
+  "동학사": [
+    {
+      "TIM_TIM": "0630",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1010",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1420",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1530",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1910",
+      "LIN_TIM": 21,
+      "COR_NAM": "중부고속(우등)"
+    }
+  ],
+  "서울남부": [
+    {
+      "TIM_TIM": "0630",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1010",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1420",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1530",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1910",
+      "LIN_TIM": 131,
+      "COR_NAM": "중부고속(우등)"
+    }
+  ],
+  "인천공항2터미널": [
+    {
+      "TIM_TIM": "0500",
+      "LIN_TIM": 213,
+      "COR_NAM": "삼흥고속(우등)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 213,
+      "COR_NAM": "중부고속(우등)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 213,
+      "COR_NAM": "삼흥고속(우등)"
+    }
+  ]
+}

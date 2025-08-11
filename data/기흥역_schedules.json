@@ -1,0 +1,250 @@
+{
+  "강남대": [
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1015",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1400",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1750",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2120",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2150",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2220",
+      "LIN_TIM": 5,
+      "COR_NAM": "경남여객(일반)"
+    }
+  ],
+  "명지대": [
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1015",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1400",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1750",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2120",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2150",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2220",
+      "LIN_TIM": 15,
+      "COR_NAM": "경남여객(일반)"
+    }
+  ],
+  "용인대": [
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1015",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1400",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1750",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2120",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2150",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2220",
+      "LIN_TIM": 10,
+      "COR_NAM": "경남여객(일반)"
+    }
+  ],
+  "용인": [
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1015",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1400",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1750",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2120",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2150",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    },
+    {
+      "TIM_TIM": "2220",
+      "LIN_TIM": 20,
+      "COR_NAM": "경남여객(일반)"
+    }
+  ]
+}

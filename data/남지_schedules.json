@@ -1,0 +1,163 @@
+{
+  "대구서부": [
+    {
+      "TIM_TIM": "0755",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 70,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "0950",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1100",
+      "LIN_TIM": 80,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 80,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1250",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(일반)"
+    },
+    {
+      "TIM_TIM": "1350",
+      "LIN_TIM": 70,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1450",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 80,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1750",
+      "LIN_TIM": 80,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 70,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1950",
+      "LIN_TIM": 80,
+      "COR_NAM": "천일여객(일반)"
+    }
+  ],
+  "부산서부(사상)": [
+    {
+      "TIM_TIM": "0715",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 50,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "0905",
+      "LIN_TIM": 60,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1000",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(일반)"
+    },
+    {
+      "TIM_TIM": "1100",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1200",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 60,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1405",
+      "LIN_TIM": 50,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1500",
+      "LIN_TIM": 60,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1600",
+      "LIN_TIM": 60,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1700",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(일반)"
+    },
+    {
+      "TIM_TIM": "1800",
+      "LIN_TIM": 60,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1905",
+      "LIN_TIM": 50,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "2000",
+      "LIN_TIM": 60,
+      "COR_NAM": "고려여객(우등)"
+    }
+  ],
+  "서울남부": [
+    {
+      "TIM_TIM": "0750",
+      "LIN_TIM": 210,
+      "COR_NAM": "천일여객(우등)"
+    },
+    {
+      "TIM_TIM": "1150",
+      "LIN_TIM": 210,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1350",
+      "LIN_TIM": 210,
+      "COR_NAM": "고려여객(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 210,
+      "COR_NAM": "천일여객(우등)"
+    }
+  ]
+}

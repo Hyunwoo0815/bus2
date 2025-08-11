@@ -1,0 +1,405 @@
+{
+  "진주": [
+    {
+      "TIM_TIM": "0655",
+      "LIN_TIM": 100,
+      "COR_NAM": "부산교통(우등)"
+    },
+    {
+      "TIM_TIM": "1245",
+      "LIN_TIM": 100,
+      "COR_NAM": "부산교통(일반)"
+    },
+    {
+      "TIM_TIM": "1545",
+      "LIN_TIM": 100,
+      "COR_NAM": "신흥여객(일반)"
+    },
+    {
+      "TIM_TIM": "1615",
+      "LIN_TIM": 100,
+      "COR_NAM": "대한여객(우등)"
+    },
+    {
+      "TIM_TIM": "2010",
+      "LIN_TIM": 100,
+      "COR_NAM": "영화여객(우등)"
+    }
+  ],
+  "순천": [
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 145,
+      "COR_NAM": "금호고속(우등)"
+    }
+  ],
+  "포항": [
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1000",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1240",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1340",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1540",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1640",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1740",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1940",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "2040",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "2200",
+      "LIN_TIM": 100,
+      "COR_NAM": "금아여행(우등)"
+    }
+  ],
+  "광주(유스퀘어)": [
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 220,
+      "COR_NAM": "금호고속(우등)"
+    }
+  ],
+  "진주혁신도시": [
+    {
+      "TIM_TIM": "0655",
+      "LIN_TIM": 80,
+      "COR_NAM": "부산교통(우등)"
+    },
+    {
+      "TIM_TIM": "1245",
+      "LIN_TIM": 80,
+      "COR_NAM": "부산교통(일반)"
+    },
+    {
+      "TIM_TIM": "1545",
+      "LIN_TIM": 80,
+      "COR_NAM": "신흥여객(일반)"
+    },
+    {
+      "TIM_TIM": "1615",
+      "LIN_TIM": 80,
+      "COR_NAM": "대한여객(우등)"
+    },
+    {
+      "TIM_TIM": "2010",
+      "LIN_TIM": 80,
+      "COR_NAM": "영화여객(우등)"
+    }
+  ],
+  "경주": [
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "0850",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1000",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1120",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1240",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1340",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1540",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1640",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1740",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1840",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "1940",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "2040",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    },
+    {
+      "TIM_TIM": "2200",
+      "LIN_TIM": 60,
+      "COR_NAM": "금아여행(우등)"
+    }
+  ],
+  "부산서부(사상)": [
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 10,
+      "COR_NAM": "공동운수(일반)"
+    },
+    {
+      "TIM_TIM": "1010",
+      "LIN_TIM": 10,
+      "COR_NAM": "공동운수(일반)"
+    },
+    {
+      "TIM_TIM": "1200",
+      "LIN_TIM": 10,
+      "COR_NAM": "공동운수(일반)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 10,
+      "COR_NAM": "공동운수(일반)"
+    },
+    {
+      "TIM_TIM": "1604",
+      "LIN_TIM": 19,
+      "COR_NAM": "신흥여객(일반)"
+    }
+  ],
+  "동광양(중마)": [
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 110,
+      "COR_NAM": "금호고속(우등)"
+    }
+  ],
+  "동대구": [
+    {
+      "TIM_TIM": "0700",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0720",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0800",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0820",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0900",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "0930",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1000",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1030",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1110",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1140",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1220",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1250",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1330",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1410",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1510",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1550",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1620",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1700",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1730",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1810",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1850",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "1930",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "2010",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "2050",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "2120",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(우등)"
+    },
+    {
+      "TIM_TIM": "2200",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(심야우등)"
+    },
+    {
+      "TIM_TIM": "2230",
+      "LIN_TIM": 80,
+      "COR_NAM": "진안고속(심야우등)"
+    }
+  ]
+}

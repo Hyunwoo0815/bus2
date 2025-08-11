@@ -1,0 +1,664 @@
+{
+  "천안": [
+    {
+      "TIM_TIM": "0614",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0644",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0709",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0729",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0749",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0809",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0829",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0849",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0909",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0929",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0949",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1009",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1029",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1049",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1109",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1129",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1149",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1204",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1219",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1234",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1249",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1309",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1329",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1349",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1409",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1429",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1449",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1509",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1529",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1609",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1629",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1649",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1709",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1729",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1749",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1809",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1829",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1849",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1904",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1919",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1934",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1949",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2009",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2029",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2049",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2109",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "2129",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2149",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2214",
+      "LIN_TIM": 66,
+      "COR_NAM": "용남고속(심야일반)"
+    }
+  ],
+  "아산(온양)": [
+    {
+      "TIM_TIM": "0614",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0709",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0749",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0909",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1029",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1129",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1219",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1249",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1349",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1449",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1649",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1749",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1829",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1919",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "2009",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2109",
+      "LIN_TIM": 106,
+      "COR_NAM": "용남고속(일반)"
+    }
+  ],
+  "잠실역(중앙)": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0705",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0950",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1030",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1110",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1240",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1415",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1540",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1730",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1830",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1920",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "2000",
+      "LIN_TIM": 10,
+      "COR_NAM": "경기고속(일반)"
+    }
+  ],
+  "동서울": [
+    {
+      "TIM_TIM": "0645",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0705",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0740",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0810",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0910",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "0950",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1030",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1035",
+      "LIN_TIM": 10,
+      "COR_NAM": "대원고속(일반)"
+    },
+    {
+      "TIM_TIM": "1110",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1130",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 10,
+      "COR_NAM": "대원고속(일반)"
+    },
+    {
+      "TIM_TIM": "1240",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1300",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1415",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1440",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1540",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1610",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1650",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1730",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1830",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "1920",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    },
+    {
+      "TIM_TIM": "2000",
+      "LIN_TIM": 25,
+      "COR_NAM": "경기고속(일반)"
+    }
+  ],
+  "잠실역": [
+    {
+      "TIM_TIM": "1035",
+      "LIN_TIM": 5,
+      "COR_NAM": "대원고속(일반)"
+    },
+    {
+      "TIM_TIM": "1135",
+      "LIN_TIM": 5,
+      "COR_NAM": "대원고속(일반)"
+    }
+  ],
+  "봉강교": [
+    {
+      "TIM_TIM": "0614",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0709",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "0749",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "0909",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1029",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1129",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1219",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1249",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1349",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1449",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1549",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1649",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "1749",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1829",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "1919",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    },
+    {
+      "TIM_TIM": "2009",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(우등)"
+    },
+    {
+      "TIM_TIM": "2109",
+      "LIN_TIM": 86,
+      "COR_NAM": "용남고속(일반)"
+    }
+  ]
+}
