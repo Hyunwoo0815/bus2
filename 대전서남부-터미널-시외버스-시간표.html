@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 📅 발행일 및 수정일 메타데이터 -->
+    <meta property="article:published_time" content="2025-08-12">
+    <meta property="article:modified_time" content="2025-08-12">
+    <meta name="date" content="2025-08-12">
+    <meta name="last-modified" content="2025-08-12">
+
+    <!-- 🎯 SEO 최적화 -->
+    <title>대전서남부 터미널 시외버스 시간표 | 70개 노선</title>
+    <meta name="description" content="🚌 대전서남부 터미널에서 출발하는 시외버스 시간표를 확인하세요. 70개 목적지로 가는 버스 시간표를 한눈에 볼 수 있습니다.">
+    <meta name="keywords" content="대전서남부 터미널, 대전서남부 시외버스, 대전서남부 버스 시간표, 시외버스 시간표">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="버스 시간표 서비스">
+
+    <!-- 🔗 Canonical URL -->
+    <link rel="canonical" href="https://bus.medilocator.co.kr/대전서남부-터미널-시외버스-시간표">
+
+    <!-- 📱 Open Graph -->
+    <meta property="og:title" content="대전서남부 터미널 시외버스 시간표 | 70개 노선">
+    <meta property="og:description" content="대전서남부 터미널에서 출발하는 시외버스 시간표를 확인하세요. 70개 목적지로 가는 버스 시간표를 제공합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bus.medilocator.co.kr/대전서남부-터미널-시외버스-시간표">
+    <meta property="og:image" content="https://bus.medilocator.co.kr/images/bus.jpg">
+    <meta property="og:site_name" content="전국 시외버스 시간표">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- 🎨 모바일 테마 -->
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- 📱 Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .header-content .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            font-size: 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #2563eb;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 20px;
+        }
+
+        .routes-section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .routes-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .routes-count {
+            background: #2563eb;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .routes-subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .route-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e293b;
+            text-decoration: none;
+            border-radius: 16px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .route-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .route-card:hover::before {
+            opacity: 1;
+        }
+
+        .route-card:hover {
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+            border-color: #2563eb;
+        }
+
+        .route-text {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .route-arrow {
+            position: relative;
+            z-index: 2;
+            font-size: 16px;
+            opacity: 0.7;
+        }
+
+        .no-routes {
+            text-align: center;
+            padding: 60px 40px;
+            color: #64748b;
+        }
+
+        .no-routes i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .back-to-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #2563eb;
+            color: white;
+            padding: 16px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-home:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 📱 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .header-content {
+                padding: 40px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 32px;
+            }
+
+            .header-content .subtitle {
+                font-size: 16px;
+            }
+
+            .routes-section {
+                padding: 24px 20px;
+            }
+
+            .routes-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .route-card {
+                padding: 16px 20px;
+                font-size: 16px;
+            }
+
+            .back-to-home {
+                bottom: 20px;
+                right: 20px;
+                padding: 14px;
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "대전서남부 터미널 시외버스 시간표",
+        "description": "대전서남부 터미널에서 출발하는 시외버스 시간표 정보를 제공합니다.",
+        "url": "https://bus.medilocator.co.kr/대전서남부-터미널-시외버스-시간표",
+        "publisher": {
+            "@type": "Organization",
+            "name": "버스 시간표 서비스"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 🎯 메인 헤더 -->
+        <div class="main-header">
+            <div class="header-content">
+                <h1><i class="fas fa-bus"></i> 대전서남부 터미널</h1>
+                <p class="subtitle">시외버스 시간표 및 노선 안내</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> 홈</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>대전서남부 터미널</span>
+            </div>
+        </div>
+
+        <!-- 🔍 검색 섹션 -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="목적지를 검색하세요... (예: 서울, 부산, 대전)">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+
+        <!-- 🚌 노선 목록 -->
+        <div class="routes-section">
+            <h2 class="routes-title">
+                <i class="fas fa-route"></i> 운행 노선
+                <span class="routes-count">70개 노선</span>
+            </h2>
+            <p class="routes-subtitle">대전서남부에서 출발하는 시외버스 노선을 선택하여 시간표를 확인하세요</p>
+            
+            <div class="routes-grid" id="routesGrid">
+                <a href="/대전서남부-에서-갈산-가는-시외버스-시간표" class="route-card" data-destination="갈산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        갈산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-계동-가는-시외버스-시간표" class="route-card" data-destination="계동">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        계동 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-고북-가는-시외버스-시간표" class="route-card" data-destination="고북">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        고북 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-공암-가는-시외버스-시간표" class="route-card" data-destination="공암">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        공암 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-공주-가는-시외버스-시간표" class="route-card" data-destination="공주">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        공주 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-공주(산성)-가는-시외버스-시간표" class="route-card" data-destination="공주(산성)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        공주(산성) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-구룡(당)-가는-시외버스-시간표" class="route-card" data-destination="구룡(당)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        구룡(당) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-구룡(부)-가는-시외버스-시간표" class="route-card" data-destination="구룡(부)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        구룡(부) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-군산-가는-시외버스-시간표" class="route-card" data-destination="군산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        군산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-규암-가는-시외버스-시간표" class="route-card" data-destination="규암">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        규암 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-금당-가는-시외버스-시간표" class="route-card" data-destination="금당">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        금당 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-금마-가는-시외버스-시간표" class="route-card" data-destination="금마">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        금마 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-기지시-가는-시외버스-시간표" class="route-card" data-destination="기지시">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        기지시 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-내포-가는-시외버스-시간표" class="route-card" data-destination="내포">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        내포 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-논산-가는-시외버스-시간표" class="route-card" data-destination="논산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        논산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-논산TG-가는-시외버스-시간표" class="route-card" data-destination="논산TG">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        논산TG 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-논티-가는-시외버스-시간표" class="route-card" data-destination="논티">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        논티 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-당진-가는-시외버스-시간표" class="route-card" data-destination="당진">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        당진 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-대전청사(선사유적)-가는-시외버스-시간표" class="route-card" data-destination="대전청사(선사유적)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        대전청사(선사유적) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-대티-가는-시외버스-시간표" class="route-card" data-destination="대티">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        대티 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-덕진동-가는-시외버스-시간표" class="route-card" data-destination="덕진동">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        덕진동 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-도마동-가는-시외버스-시간표" class="route-card" data-destination="도마동">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        도마동 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-마티-가는-시외버스-시간표" class="route-card" data-destination="마티">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        마티 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-목면-가는-시외버스-시간표" class="route-card" data-destination="목면">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        목면 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-보령(대천)-가는-시외버스-시간표" class="route-card" data-destination="보령(대천)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        보령(대천) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-부여-가는-시외버스-시간표" class="route-card" data-destination="부여">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        부여 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-비봉-가는-시외버스-시간표" class="route-card" data-destination="비봉">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        비봉 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-사곡-가는-시외버스-시간표" class="route-card" data-destination="사곡">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        사곡 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-삼례-가는-시외버스-시간표" class="route-card" data-destination="삼례">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        삼례 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-서산-가는-시외버스-시간표" class="route-card" data-destination="서산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        서산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-서천-가는-시외버스-시간표" class="route-card" data-destination="서천">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        서천 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-세종-가는-시외버스-시간표" class="route-card" data-destination="세종">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        세종 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-신례원-가는-시외버스-시간표" class="route-card" data-destination="신례원">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        신례원 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-신안(충남)-가는-시외버스-시간표" class="route-card" data-destination="신안(충남)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        신안(충남) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-신양-가는-시외버스-시간표" class="route-card" data-destination="신양">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        신양 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-신평-가는-시외버스-시간표" class="route-card" data-destination="신평">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        신평 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-신풍-가는-시외버스-시간표" class="route-card" data-destination="신풍">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        신풍 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-십자가-가는-시외버스-시간표" class="route-card" data-destination="십자가">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        십자가 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-안심-가는-시외버스-시간표" class="route-card" data-destination="안심">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        안심 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-양정-가는-시외버스-시간표" class="route-card" data-destination="양정">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        양정 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-여산-가는-시외버스-시간표" class="route-card" data-destination="여산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        여산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-연무대-가는-시외버스-시간표" class="route-card" data-destination="연무대">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        연무대 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-연산(충남)-가는-시외버스-시간표" class="route-card" data-destination="연산(충남)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        연산(충남) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-예산-가는-시외버스-시간표" class="route-card" data-destination="예산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        예산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-옥산(충남)-가는-시외버스-시간표" class="route-card" data-destination="옥산(충남)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        옥산(충남) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-우성-가는-시외버스-시간표" class="route-card" data-destination="우성">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        우성 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-운산-가는-시외버스-시간표" class="route-card" data-destination="운산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        운산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-웅천(보령)-가는-시외버스-시간표" class="route-card" data-destination="웅천(보령)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        웅천(보령) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-유구-가는-시외버스-시간표" class="route-card" data-destination="유구">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        유구 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-유성-가는-시외버스-시간표" class="route-card" data-destination="유성">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        유성 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-은진-가는-시외버스-시간표" class="route-card" data-destination="은진">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        은진 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-음암-가는-시외버스-시간표" class="route-card" data-destination="음암">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        음암 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-인천공항1터미널-가는-시외버스-시간표" class="route-card" data-destination="인천공항1터미널">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        인천공항1터미널 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-인천공항2터미널-가는-시외버스-시간표" class="route-card" data-destination="인천공항2터미널">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        인천공항2터미널 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-임성동-가는-시외버스-시간표" class="route-card" data-destination="임성동">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        임성동 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-장항-가는-시외버스-시간표" class="route-card" data-destination="장항">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        장항 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-전주-가는-시외버스-시간표" class="route-card" data-destination="전주">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        전주 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-정산-가는-시외버스-시간표" class="route-card" data-destination="정산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        정산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-주정-가는-시외버스-시간표" class="route-card" data-destination="주정">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        주정 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-천안-가는-시외버스-시간표" class="route-card" data-destination="천안">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        천안 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-천태-가는-시외버스-시간표" class="route-card" data-destination="천태">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        천태 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-청라-가는-시외버스-시간표" class="route-card" data-destination="청라">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        청라 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-청양-가는-시외버스-시간표" class="route-card" data-destination="청양">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        청양 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-판교(충남)-가는-시외버스-시간표" class="route-card" data-destination="판교(충남)">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        판교(충남) 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-합덕-가는-시외버스-시간표" class="route-card" data-destination="합덕">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        합덕 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-해미-가는-시외버스-시간표" class="route-card" data-destination="해미">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        해미 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-홍산-가는-시외버스-시간표" class="route-card" data-destination="홍산">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        홍산 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-홍성-가는-시외버스-시간표" class="route-card" data-destination="홍성">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        홍성 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-화성-가는-시외버스-시간표" class="route-card" data-destination="화성">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        화성 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+                <a href="/대전서남부-에서-황화-가는-시외버스-시간표" class="route-card" data-destination="황화">
+                    <div class="route-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                        황화 시간표
+                    </div>
+                    <i class="fas fa-chevron-right route-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🏠 홈으로 버튼 -->
+    <a href="/" class="back-to-home" title="메인으로 돌아가기">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- 📝 푸터 -->
+    <div class="footer">
+        <p>&copy; 2025 전국 시외버스 시간표. 최신 업데이트: 2025년 08월 12일</p>
+        <p><a href="/sitemap.xml">사이트맵</a> | <a href="/rss.xml">RSS</a> | <a href="/">메인으로</a></p>
+    </div>
+
+    <script>
+        // 검색 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const routeCards = document.querySelectorAll('.route-card');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                routeCards.forEach(card => {
+                    const destination = card.dataset.destination.toLowerCase();
+                    
+                    if (searchTerm === '' || destination.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // 카드 호버 효과
+            routeCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html><!-- Force update: 2025-08-12 15:30:25 UTC -->
